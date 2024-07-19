@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/mpana/Desktop/Automation-Java-Web/Automation Java Web">
+        <classes>
+            <class name="com.myp.gui.EndToEndTest">
+                <methods>
+                    <include name="endToEndTest"/>
+                </methods>
+            </class>
+            <class name="com.myp.gui.LoginTest">
+                <methods>
+                    <include name="verifyAlreadyRegisteredUserCanSuccessfullyLogin"/>
+                    <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword"/>
+                    <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername"/>
+                    <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials"/>
+                </methods>
+            </class>
+            <class name="com.myp.gui.PostTest">
+                <methods>
+                    <include name="verifyUserCanCreateNewPostAndDeleteIt"/>
+                </methods>
+            </class>
+            <class name="com.myp.gui.RegistrationTest">
+                <methods>
+                    <include name="martiXmlTest"/>
+                    <include name="verifyUserCanNotRegisterWithINValidData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
