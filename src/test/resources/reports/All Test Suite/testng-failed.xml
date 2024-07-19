@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="C:/CODE/SK_AU_14/v5/SKAU14TAF(failed)" verbose="0">
+    <classes>
+      <class name="com.myp.gui.PostTest">
+        <methods>
+          <include name="setUpTest"/>
+          <include name="setupTestSuite"/>
+          <include name="verifyUserCanCreateNewPostAndDeleteIt" invocation-numbers="0"/>
+          <include name="tearDownTest"/>
+          <include name="cleanFiles"/>
+        </methods>
+      </class> <!-- com.myp.gui.PostTest -->
+    </classes>
+  </test> <!-- C:/CODE/SK_AU_14/v5/SKAU14TAF(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
