@@ -20,54 +20,57 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TestObject {
-    protected static final String TEST_RESOURCES_DIR = "src\\test\\resources\\";
-    protected static final String DOWNLOAD_DIR = TEST_RESOURCES_DIR.concat("download\\");
-    protected static final String SCREENSHOTS_DIR = TEST_RESOURCES_DIR.concat("screenshots\\");
-    protected static final String REPORTS_DIR = TEST_RESOURCES_DIR.concat("reports\\");
-    protected static final String UPLOAD_DIR = TEST_RESOURCES_DIR.concat("upload\\");
+    // Directory paths for storing test resources
+    protected static final String TEST_RESOURCES_DIR = "src/test/resources/";
+    protected static final String DOWNLOAD_DIR = TEST_RESOURCES_DIR.concat("download/");
+    protected static final String SCREENSHOTS_DIR = TEST_RESOURCES_DIR.concat("screenshots/");
+    protected static final String REPORTS_DIR = TEST_RESOURCES_DIR.concat("reports/");
+    protected static final String UPLOAD_DIR = TEST_RESOURCES_DIR.concat("upload/");
 
     private WebDriver webDriver;
 
-    public WebDriver getDriver() {
+    public WebDriver getWebDriver() {
         return webDriver;
     }
+
     @BeforeSuite
     protected final void setupTestSuite() throws IOException {
+        // Clean up directories before running the test suite
         cleanDirectory(REPORTS_DIR);
         cleanDirectory(SCREENSHOTS_DIR);
-        //We are using only chrome so there is a setup only for chrome
+
+        // Setup WebDriverManager for Chrome
         WebDriverManager.chromedriver().setup();
-    };
+    }
 
     @BeforeMethod
     protected final void setUpTest() {
+        // Initialize ChromeDriver with custom options
         this.webDriver = new ChromeDriver(configChromeOptions());
         this.webDriver.manage().window().maximize();
         this.webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         this.webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
-    };
+    }
 
     @AfterMethod
     protected final void tearDownTest(ITestResult testResult) throws IOException {
+        // Take screenshot if the test fails
         takeScreenshot(testResult);
         quitDriver();
-    };
+    }
 
     @AfterSuite
     public void cleanFiles() throws IOException {
+        // Clean up download directory after the test suite
         cleanDirectory(DOWNLOAD_DIR);
-    };
+    }
 
-    private void quitDriver() throws IOException {
-        if (!(webDriver == null)) {
+    private void quitDriver() {
+        if (webDriver != null) {
             System.out.println("The driver is about to be closed.");
             webDriver.quit();
-        };
-    };
-
-    protected WebDriver getWebDriver() {
-        return webDriver;
-    };
+        }
+    }
 
     private void takeScreenshot(ITestResult testResult) {
         if (ITestResult.FAILURE == testResult.getStatus()) {
@@ -75,46 +78,43 @@ public class TestObject {
                 TakesScreenshot takesScreenshot = (TakesScreenshot) webDriver;
                 File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);
                 String testName = testResult.getName();
-                FileUtils.copyFile(screenshot, new File(SCREENSHOTS_DIR.concat(testName).concat(".jpg")));
+                File destinationFile = new File(SCREENSHOTS_DIR.concat(testName).concat(".jpg"));
+                FileUtils.copyFile(screenshot, destinationFile);
+                System.out.println("Screenshot saved at: " + destinationFile.getPath());
             } catch (IOException e) {
                 System.out.println("Unable to create a screenshot file: " + e.getMessage());
-            };
-        };
-    };
+            }
+        }
+    }
 
     private ChromeOptions configChromeOptions() {
-        //Create path and setting for download folder
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("download.default_directory",
                 System.getProperty("user.dir").concat("\\").concat(DOWNLOAD_DIR));
 
         ChromeOptions chromeOptions = new ChromeOptions();
-        //Set new default download folder
         chromeOptions.setExperimentalOption("prefs", prefs);
-        //Force the download to be automatic
         chromeOptions.addArguments("disable-popup-blocking");
 
         return chromeOptions;
     }
 
     private void cleanDirectory(String directoryPath) throws IOException {
-        System.out.println("____________________________________________________________");
         File directory = new File(directoryPath);
 
-        //If directory is not shown after git clone of the repo this code will build the path
+        // Create directory if it does not exist
         if (!directory.exists()) {
             FileUtils.forceMkdir(directory);
-            System.out.println("Created folder with path: "+ directoryPath);
-        };
+            System.out.println("Created folder with path: " + directoryPath);
+        }
 
-        System.out.println("Deleting not needed files from folder with path: "+ directoryPath);
+        // Clean directory
         FileUtils.cleanDirectory(directory);
         String[] fileList = directory.list();
         if (fileList != null && fileList.length == 0) {
-            System.out.printf("All file are deleted in Directory: %s%n", directoryPath);
+            System.out.printf("All files are deleted in Directory: %s%n", directoryPath);
         } else {
             System.out.printf("Unable to delete the files in Directory: %s%n", directoryPath);
-        };
-        System.out.println("____________________________________________________________");
-    };
+        }
+    }
 }

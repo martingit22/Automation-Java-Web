@@ -8,107 +8,72 @@ import java.io.File;
 
 public class EndToEndTest extends TestObject {
 
-    /* ***************************************
-        The test case will fail if you are not providing a picture with file name testImg.jpg
-        you have to navigate to
-        1. SRC (root directory )
-        1.1. Go to "test" folder
-        1.2. After that open "java"
-        1.3. Nxt open "resources"
-        1.4. Over there you have to provide picture testImg or 6420.jpeg
-       ***************************************
-    */
+    // File path for the post picture and caption text
     File postPicture = new File("src\\test\\resources\\uploads\\testImg.jpg");
     String caption = "Testing create post caption";
 
     @Test
     public void endToEndTest() {
         System.out.println("\n _________________________________________________");
-        System.out.println("=== > *** THE IS A END TO END SCENARIO  *** < ===");
+        System.out.println("=== > *** END TO END SCENARIO *** < ===");
 
-        final String NEWUSERNAME = "PROVIDE YOUR OWN CREDS HERE";
-        final String EMAIL = "PROVIDE YOUR OWN CREDS HERE";
-        final String REGPASSWORD = "PROVIDE YOUR OWN CREDS HERE";
-        final String CONFIRMPASSWORD = "PROVIDE YOUR OWN CREDS HERE";
-
-        /*
-         ***************************************
-         Do we need to start with the registration of a new user
-         Should we keep the new username , password , email data
-         So we can proceed with the next steps
-         Or even more can we print the data so when we read the logs from the run
-         we can try to follow the script if needed for debugging
-        ***************************************
-         */
+        final String NEWUSERNAME = "yourUsername";
+        final String EMAIL = "yourEmail";
+        final String REGPASSWORD = "yourPassword";
+        final String CONFIRMPASSWORD = "yourConfirmPassword";
 
         HomePage homePage = new HomePage(super.getWebDriver());
-        System.out.println();
+        LoginPage loginPage = new LoginPage(super.getWebDriver());
+        PostPage postPage = new PostPage(super.getWebDriver());
+        ProfilePage profilePage = new ProfilePage(super.getWebDriver());
+        PostModal postModal = new PostModal(super.getWebDriver());
+
+        // Step 1: Open iSkilo site
         System.out.println("STEP 1: Open iSkilo site.");
         homePage.openHomePage();
-        System.out.println("Result: The website is open.");
+        Assert.assertTrue(homePage.isHomePageOpened(), "Home page is not opened.");
 
-        System.out.println("STEP 2: Navigate to Registration page.");
+        // Step 2: Click on Login button
+        System.out.println("STEP 2: Navigate to Login page.");
+        homePage.clickOnNavigationLoginButton();
+        Assert.assertTrue(homePage.isUrlLoaded("users/login"), "Login page is not opened.");
 
-        System.out.println("RESULT: The Page is open and title is visible.");
+        // Step 3: Perform login
+        System.out.println("STEP 3: Perform login.");
+        loginPage.loginWithUserAndPassword(NEWUSERNAME, REGPASSWORD);
+        Assert.assertTrue(homePage.isLogOutButtonShown(), "Logout button is not shown, login might have failed.");
 
-        System.out.println("STEP 3: Checking the place holders of the fields");
+        // Step 4: Click on New Post button
+        System.out.println("STEP 4: Navigate to New Post page.");
+        homePage.clickOnNewPostButton();
+        Assert.assertTrue(postPage.isImageVisible(), "New post page is not opened properly.");
 
-        System.out.println("STEP 4: Making a registration.");
+        // Step 5: Upload picture and provide caption
+        System.out.println("STEP 5: Upload picture and provide caption.");
+        postPage.uploadPicture(postPicture);
+        Assert.assertTrue(postPage.isImageVisible(), "Uploaded image is not visible.");
+        Assert.assertEquals(postPage.getImageName(), postPicture.getName(), "Image name is incorrect.");
+        postPage.providePostCaption(caption);
+        postPage.clickCreatePostButton();
 
-        System.out.println("RESULT: The registration is successful.");
+        // Step 6: Verify post creation
+        System.out.println("STEP 6: Verify the new post.");
+        int expectedPostCount = 1;
+        int actualPostCount = profilePage.getPostCount();
+        Assert.assertEquals(actualPostCount, expectedPostCount, "Post count is incorrect.");
 
-        System.out.println("STEP 5: Checking that the user is log in after registration.");
+        // Step 7: Open and verify post details
+        System.out.println("STEP 7: Open and verify post details.");
+        profilePage.clickPost(0);
+        Assert.assertTrue(postModal.isImageVisible(), "Image in the post modal is not visible.");
+        Assert.assertEquals(postModal.getPostUser(), NEWUSERNAME, "Username in the post modal is incorrect.");
 
+        // Step 8: Delete the new post
+        System.out.println("STEP 8: Delete the new post.");
+        postModal.clickOnBinIcon();
+        postModal.confirmDeletingPost();
+        Assert.assertEquals(profilePage.getPostCount(), 0, "Post was not deleted.");
 
-        //How to refactor this in a better way -> should we use const with the suffix and the base url
-        //Can we create a getBaseUrlMethod in ISkilo
-        homePage.isUrlLoaded("http://training.skillo-bg.com:4200/posts/all");
-
-        //***************************************
-        //        System.out.println("STEP:6 Login out");
-        //        homePage.clickOnLogOutButton();
-        //        System.out.println("RESULT: The user is log out");
-        //***************************************
-
-        LoginPage loginPage = new LoginPage(super.getWebDriver());
-        System.out.println("STEP 7: Verify that the user is on login page.");
-
-        System.out.println("STEP 8: Checking the placeholders of the login page.");
-
-        System.out.println("STEP 9: Marking the \"remember me\" check box.");
-
-        System.out.println("STEP 10: Entering credentials of the newly registered user and submitting.");
-
-        System.out.println("STEP 11: Verifying the submit message.");
-
-        System.out.println("STEP 12: Verifying that the user is log in.");
-
-        System.out.println("STEP 13: Navigating to \"New post\".");
-
-        //***************************************
-        //Missing page object initialization
-        //How to init a class -. MyClass myclass = new MyClass(super.rakia);
-        //Init new PostPageObject here
-        //***************************************
-
-        System.out.println("STEP 14: Upload new post picture.");
-
-        System.out.println("STEP 15: Enter caption.");
-
-        System.out.println("STEP 16: Create the new post.");
-
-        System.out.println("STEP 17: Verifying the post count.");
-
-        System.out.println("STEP 18: Open the new post.");
-
-        //***************************************
-        //init PostModalPage here
-        //***************************************
-
-        System.out.println("STEP 19: Verifying that the image is visible and the username is correct.");
-
-        System.out.println("STEP 20: Deleting the new post");
-
-        System.out.println("RESULT: The post is deleted");
-    };
+        System.out.println("RESULT: The post is successfully created and deleted.");
+    }
 }

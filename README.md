@@ -17,22 +17,12 @@
 - [Contact](#contact)
 
 ## Overview
-Iskillo social networks is an online platforms where users can create profiles,
-connect with friends and family. 
-
-All Iskillo users can share content, and engage with
-a broader community. 
-
-ISkillo have revolutionized communication, 
-enabling instant sharing of information and fostering 
-global connections not only in Bulgaria.
-
-Many QA engineers are connected via the fast variety of  test automation activities performed on ISkillo.
+Java Maven project for automated testing with Selenium WebDriver and TestNG. Utilizes Page Object Model design pattern and Page Factory. Tests include login, navigation, and form submissions on Chrome browser. Screenshots captured on test failures.
 
 ## Test activities performed with Selenium 4+ and TestNG Java unit framework:
 List of the test cases.
 - Registration feature
-  - Verify user cn registered in the system with valid data
+  - Verify user can register in the system with valid data
   - Verify user cannot register in the system with invalid data
 
 

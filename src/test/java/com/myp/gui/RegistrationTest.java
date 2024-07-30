@@ -2,6 +2,7 @@ package com.myp.gui;
 
 import com.myp.POM.*;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import utils.ContentGeneration;
 
 import java.util.Random;
@@ -9,26 +10,19 @@ import java.util.Random;
 public class RegistrationTest extends TestObject{
 
     @Test
-    public void martiXmlTest() {
+    public void verifyUserCanRegisterWithValidData() {
         System.out.println("\n _________________________________________________");
-        System.out.println("=== > *** Verify user cn registered in the system with valid data *** < ===");
+        System.out.println("=== > *** Verify user can register in the system with valid data *** < ===");
 
         HomePage homePage = new HomePage(super.getWebDriver());
 
-        /* ***************************************
-        Providing a second way to generate random data
-        We are using current date stamp to generate random string
-        How : by getting the time at the moment and append some static username
-        ***************************************
-        */
-
-        final String USERNAME = ContentGeneration.createUser() ;
+        final String USERNAME = ContentGeneration.createUser();
         final String EMAIL = ContentGeneration.createEmail();
 
         System.out.println("THE RANDOM GENERATED USERNAME IS: " + USERNAME);
         System.out.println("THE RANDOM GENERATED EMAIL IS: " + EMAIL);
 
-        System.out.println("STEP 1: Not logged in user has open the ISkilo HomePage.");
+        System.out.println("STEP 1: Not logged in user has opened the ISkilo HomePage.");
         homePage.openHomePage();
 
         System.out.println("STEP 2: The user has navigated to ISkilo LoginPage");
@@ -38,74 +32,47 @@ public class RegistrationTest extends TestObject{
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         loginPage.clickOnRegistrationLink();
 
-        //Must add new valid data for registration. Email must be under 20 chars.
         System.out.println("STEP 4: The user provides registration data");
         RegistrationPage registrationPage = new RegistrationPage(super.getWebDriver());
         registrationPage.fullRegistrationInputsAndActions(USERNAME, EMAIL, "123456");
 
-        System.out.println("STEP 4: Verify the user is successfully logged in after registration");
-        /*  ***************************************
-            THERE IS A NEED MORE VERIFICATION TO BE DONE
-            EXAMPLE user profile name matches the provided user for registration
-            ***************************************
-        */
-    };
+        System.out.println("STEP 5: Verify the user is successfully logged in after registration");
+        HomePage loggedInHomePage = new HomePage(super.getWebDriver());
+        String actualUsername = loggedInHomePage.getLoggedInUsername();
+
+        Assert.assertEquals(actualUsername, USERNAME, "The logged in username should match the registered username");
+
+        System.out.println("User registration and login successful with username: " + actualUsername);
+    }
 
     @Test
-    public void verifyUserCanNotRegisterWithINValidData(){
+    public void verifyUserCannotRegisterWithInvalidData() {
         System.out.println("\n _________________________________________________");
         System.out.println("=== > *** Verify user cannot register in the system with invalid data *** < ===");
+
         HomePage homePage = new HomePage(super.getWebDriver());
 
-        /* ***************************************
-        Providing a second way to generate random data
-        We are using current date stamp to generate random string
-        How : by getting the time at the moment and append some static username
-        ***************************************
-        */
-        final String USERNAME = "W" ;
-        final String EMAIL = "WRONG";
+        final String USERNAME = "InvalidUser";
+        final String EMAIL = ContentGeneration.createInvalidEmail();
 
-        System.out.println("THE RANDOM GENERATED USERNAME IS: " + USERNAME);
-        System.out.println("THE RANDOM GENERATED EMAIL IS: " + EMAIL);
+        System.out.println("Generated invalid USERNAME: " + USERNAME);
+        System.out.println("Generated invalid EMAIL: " + EMAIL);
 
-        System.out.println("STEP 1: Not logged in user has open the ISkilo HomePage.");
+        System.out.println("STEP 1: Not logged in user opens the ISkilo HomePage.");
         homePage.openHomePage();
 
-        System.out.println("STEP 2: The user has navigated to ISkilo LoginPage");
+        System.out.println("STEP 2: The user navigates to the ISkilo LoginPage.");
         homePage.clickOnNavigationLoginButton();
 
-        System.out.println("STEP 3: The user has clicked Register");
+        System.out.println("STEP 3: The user clicks the Register link.");
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         loginPage.clickOnRegistrationLink();
 
-        //Must add new valid data for registration. Email must be under 20 chars.
-        System.out.println("STEP 4: The user provides registration data");
+        System.out.println("STEP 4: The user provides invalid registration data.");
         RegistrationPage registrationPage = new RegistrationPage(super.getWebDriver());
         registrationPage.fullRegistrationInputsAndActions(USERNAME, EMAIL, "123456");
 
-        System.out.println("STEP 4: Verify the user is successfully logged in after registration");
-       /*  ***************************************
-            THERE IS A NEED MORE VERIFICATION TO BE DONE
-            EXAMPLE user profile name matches the provided user for registration
-            ***************************************
-        */
-
-    };
-
-    //Providing a 3rd way to generate random data
-    //There is other option to generate some random string with this method bellow
-    public static String generateRandomString() {
-        int length = 3;
-        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        Random random = new Random();
-        StringBuilder randomString = new StringBuilder(length);
-
-        for (int i = 0; i < length; i++) {
-            int index = random.nextInt(characters.length());
-            randomString.append(characters.charAt(index));
-        };
-        return randomString.toString();
-    };
-
+        System.out.println("STEP 5: Verify the user cannot register with invalid data.");
+        registrationPage.printRegistrationErrorMessage();
+    }
 }
