@@ -8,12 +8,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class ISkillo {
+public class CommonMethodsForPOM {
     private final String BASE_URL = "http://training.skillo-bg.com:4200/";
     WebDriver driver;
     WebDriverWait wait;
 
-    public ISkillo(WebDriver driver) {
+    public CommonMethodsForPOM(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     };
@@ -25,22 +25,21 @@ public class ISkillo {
         waitPageTobeFullLoaded();
     };
 
-    public void waitAndClick(WebElement element) {
+    public void click(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
         wait.until(ExpectedConditions.elementToBeClickable(element));
 
         element.click();
         System.out.println("The user has clicked on element");
 
-        waitPageTobeFullLoaded();
+        //this is not a very good idea to be used in a real life application due to the fact that sometimes js can be heavy
+        //waitPageTobeFullLoaded();
     };
 
     public void typeTextInField(WebElement element, String inputText) {
         wait.until(ExpectedConditions.visibilityOf(element));
         element.clear();
         element.sendKeys(inputText);
-
-        waitPageTobeFullLoaded();
     };
 
     //This waiting strategy is very appropriate for a small demo test sites
@@ -83,4 +82,5 @@ public class ISkillo {
         }
         return isTitleShown;
     };
+
 }

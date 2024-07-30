@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.io.File;
-public class PostPage extends ISkillo {
+public class PostPage extends CommonMethodsForPOM {
 
     private final String POST_PAGE_URL = "posts/create";
     @FindBy(css = "img.image-preview")

@@ -3,6 +3,11 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/mpana/Desktop/Automation-Java-Web/Automation Java Web">
         <classes>
+            <class name="com.myp.gui.CommentPostTest">
+                <methods>
+                    <include name="verifyUserCanCreatePostAndComment"/>
+                </methods>
+            </class>
             <class name="com.myp.gui.EndToEndTest">
                 <methods>
                     <include name="endToEndTest"/>
@@ -13,18 +18,31 @@
                     <include name="verifyAlreadyRegisteredUserCanSuccessfullyLogin"/>
                     <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword"/>
                     <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername"/>
-                    <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithNotProvidedCredentials"/>
+                    <include name="verifyUserCanSuccessfullyLogout"/>
+                    <include name="verifyUnregisteredUserCannotLogin"/>
+                    <include name="verifyUserCannotLoginWithEmptyCredentials"/>
                 </methods>
             </class>
             <class name="com.myp.gui.PostTest">
                 <methods>
+                    <include name="verifyPostModalDetails"/>
                     <include name="verifyUserCanCreateNewPostAndDeleteIt"/>
                 </methods>
             </class>
             <class name="com.myp.gui.RegistrationTest">
                 <methods>
-                    <include name="martiXmlTest"/>
-                    <include name="verifyUserCanNotRegisterWithINValidData"/>
+                    <include name="verifyUserCanRegisterWithValidData"/>
+                    <include name="verifyUserCannotRegisterWithInvalidData"/>
+                </methods>
+            </class>
+            <class name="com.myp.gui.TestClass">
+                <methods>
+                    <include name="verifyUserCanRegisterWithValidData"/>
+                    <include name="verifyUserCannotRegisterWithInvalidData"/>
+                    <include name="verifyAlreadyRegisteredUserCanSuccessfullyLogin"/>
+                    <include name="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndNavigateToEditProfile"/>
+                    <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword"/>
+                    <include name="verifyUserCanCreateNewPostAndDeleteIt"/>
                 </methods>
             </class>
         </classes>
