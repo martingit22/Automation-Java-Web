@@ -26,6 +26,18 @@ public class RegistrationPage extends CommonMethodsForPOM {
     @FindBy(className = "invalid-feedback")
     private WebElement registrationErrorMessage;
 
+    @FindBy(xpath = "//div[contains(text(), 'Successful login!')]")
+    private WebElement registrationSuccessMessage;
+
+    public String getRegistrationSuccessMessage() {
+        try {
+            wait.until(ExpectedConditions.visibilityOf(registrationSuccessMessage));
+            return registrationSuccessMessage.getText();
+        } catch (NoSuchElementException e) {
+            return "";
+        }
+    }
+
     public RegistrationPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -64,21 +76,35 @@ public class RegistrationPage extends CommonMethodsForPOM {
     //Getters
     public String getUserNamePlaceHolder() {
         wait.until(ExpectedConditions.visibilityOf(usernameInputField));
-        return usernameInputField.getAttribute("value");
+        return usernameInputField.getAttribute("placeholder");
     }
 
-    public boolean isUserNamePlaceHolderCorrect(String expectedUserNamePlaceHolder) {
-        boolean isPerRequirments = false;
-        try {
-            String actualUserNamePlaceHolder = getUserNamePlaceHolder();
-            isPerRequirments = expectedUserNamePlaceHolder.equals(actualUserNamePlaceHolder);
-
-        } catch (NoSuchElementException e) {
-            System.out.println("ERROR ! The username placeHolder is not correct");
-            isPerRequirments = false;
-        }
-        return isPerRequirments;
+    public String getEmailPlaceHolder() {
+        wait.until(ExpectedConditions.visibilityOf(emailInputField));
+        return emailInputField.getAttribute("placeholder");
     }
+
+    public String getPasswordPlaceHolder() {
+        wait.until(ExpectedConditions.visibilityOf(passwordInputField));
+        return passwordInputField.getAttribute("placeholder");
+    }
+
+    public String getConfirmPasswordPlaceHolder() {
+        wait.until(ExpectedConditions.visibilityOf(confirmPasswordInputField));
+        return confirmPasswordInputField.getAttribute("placeholder");
+    }
+//    public boolean isUserNamePlaceHolderCorrect(String expectedUserNamePlaceHolder) {
+//        boolean isPerRequirments = false;
+//        try {
+//            String actualUserNamePlaceHolder = getUserNamePlaceHolder();
+//            isPerRequirments = expectedUserNamePlaceHolder.equals(actualUserNamePlaceHolder);
+//
+//        } catch (NoSuchElementException e) {
+//            System.out.println("ERROR ! The username placeHolder is not correct");
+//            isPerRequirments = false;
+//        }
+//        return isPerRequirments;
+//    }
 
     public void printRegistrationErrorMessage() {
         try {

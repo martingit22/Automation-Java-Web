@@ -23,8 +23,8 @@
 
     <repositories>
         <repository>
-            <id>jcenter</id>
-            <url>https://dl.bintray.com/cbeust/maven/</url>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
         </repository>
     </repositories>
 
