@@ -1,9 +1,6 @@
 package com.myp.POM;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,6 +22,7 @@ public class ProfilePage extends CommonMethodsForPOM {
 
     @FindBy(className = "profile-image-source")
     private WebElement imgSource;
+
 
     public ProfilePage(WebDriver driver) {
         super(driver);
@@ -49,8 +47,18 @@ public class ProfilePage extends CommonMethodsForPOM {
     }
 
     public int getPostCount() {
-        List<WebElement> posts = driver.findElements(By.tagName("app-post"));
-        return posts.size();
+        try {
+            // Locate the <li> element containing the post count using XPath
+            WebElement postCountElement = driver.findElement(By.xpath("//li[strong[@class='profile-stat-count']]"));
+            // Locate the <strong> element within the <li> using XPath
+            WebElement strongElement = postCountElement.findElement(By.xpath(".//strong[@class='profile-stat-count']"));
+            // Get the text of the <strong> element and parse it as an integer
+            String postCountText = strongElement.getText().replaceAll("[^0-9]", ""); // Remove non-numeric characters
+            return Integer.parseInt(postCountText);
+        } catch (Exception e) {
+            e.printStackTrace(); // Log the exception for debugging purposes
+            return -1; // Return a default value or handle as needed
+        }
     }
 
     public void clickPost(int postIndex) {
@@ -81,5 +89,19 @@ public class ProfilePage extends CommonMethodsForPOM {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public void openLatestPost() {
+        List<WebElement> posts = driver.findElements(By.className("gallery-item"));
+
+        // Wait for the posts to be visible
+        wait.until(ExpectedConditions.visibilityOfAllElements(posts));
+
+        if (posts.isEmpty()) {
+            throw new NoSuchElementException("No posts available to open.");
+        }
+
+        WebElement latestPost = posts.get(0);
+        click(latestPost);
     }
 }

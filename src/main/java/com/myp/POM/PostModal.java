@@ -31,11 +31,9 @@ public class PostModal extends CommonMethodsForPOM {
     }
 
     public String getPostUser() {
-        WebElement postUser = modalElement.findElement(By.className("post-user"));
-        wait.until(ExpectedConditions.visibilityOf(postUser));
-        return postUser.getText();
+        WebElement postUserElement = driver.findElement(By.xpath("//div[contains(@class, 'profile-user-settings')]//h2"));
+        return postUserElement.getText();
     }
-
 
     public void clickOnBinIcon() {
 
