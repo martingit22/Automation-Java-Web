@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 14, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 92.502 s <<< FAILURE! - in TestSuite
-com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword  Time elapsed: 2.614 s  <<< FAILURE!
+Tests run: 14, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 96.426 s <<< FAILURE! - in TestSuite
+com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword  Time elapsed: 2.466 s  <<< FAILURE!
 java.lang.AssertionError: expected [Successful login!] but found [Ivalid password]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -10,8 +10,8 @@ java.lang.AssertionError: expected [Successful login!] but found [Ivalid passwor
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:122)
-	at com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:47)
+	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
+	at com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:75)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -43,13 +43,13 @@ java.lang.AssertionError: expected [Successful login!] but found [Ivalid passwor
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 
-com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername  Time elapsed: 21.608 s  <<< FAILURE!
+com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername  Time elapsed: 21.631 s  <<< FAILURE!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: usernameOrEmail' (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at com.myp.POM.CommonMethodsForPOM.typeTextInField(CommonMethodsForPOM.java:40)
-	at com.myp.POM.LoginPage.provideUserName(LoginPage.java:101)
-	at com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername(LoginTest.java:55)
+	at com.myp.POM.LoginPage.provideUserName(LoginPage.java:74)
+	at com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername(LoginTest.java:90)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -86,9 +86,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b021f2a05fe32eba9aee5b362a58ad94, findElement {value=usernameOrEmail, using=name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\mpana\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50893}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50893/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b021f2a05fe32eba9aee5b362a58ad94
+Command: [898f3bd5eeaa1cb6105843456aeba858, findElement {value=usernameOrEmail, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\mpana\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52969}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52969/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 898f3bd5eeaa1cb6105843456aeba858
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -112,7 +112,7 @@ Session ID: b021f2a05fe32eba9aee5b362a58ad94
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
 	... 33 more
 
-com.myp.gui.LoginTest.verifyUnregisteredUserCannotLogin  Time elapsed: 2.242 s  <<< FAILURE!
+com.myp.gui.LoginTest.verifyUnregisteredUserCannotLogin  Time elapsed: 2.639 s  <<< FAILURE!
 java.lang.AssertionError: expected [Successful login!] but found [User not found]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -120,8 +120,8 @@ java.lang.AssertionError: expected [Successful login!] but found [User not found
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:122)
-	at com.myp.gui.LoginTest.verifyUnregisteredUserCannotLogin(LoginTest.java:99)
+	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
+	at com.myp.gui.LoginTest.verifyUnregisteredUserCannotLogin(LoginTest.java:170)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -153,7 +153,7 @@ java.lang.AssertionError: expected [Successful login!] but found [User not found
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 
-com.myp.gui.LoginTest.verifyUserCannotLoginWithEmptyCredentials  Time elapsed: 2.616 s  <<< FAILURE!
+com.myp.gui.LoginTest.verifyUserCannotLoginWithEmptyCredentials  Time elapsed: 3.298 s  <<< FAILURE!
 java.lang.AssertionError: expected [Successful login!] but found [UsernameOrEmail cannot be empty]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -161,8 +161,8 @@ java.lang.AssertionError: expected [Successful login!] but found [UsernameOrEmai
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:122)
-	at com.myp.gui.LoginTest.verifyUserCannotLoginWithEmptyCredentials(LoginTest.java:116)
+	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
+	at com.myp.gui.LoginTest.verifyUserCannotLoginWithEmptyCredentials(LoginTest.java:200)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -194,7 +194,7 @@ java.lang.AssertionError: expected [Successful login!] but found [UsernameOrEmai
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 
-com.myp.gui.RegistrationTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword  Time elapsed: 2.532 s  <<< FAILURE!
+com.myp.gui.RegistrationTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword  Time elapsed: 3.13 s  <<< FAILURE!
 java.lang.AssertionError: expected [Successful login!] but found [Ivalid password]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -202,7 +202,7 @@ java.lang.AssertionError: expected [Successful login!] but found [Ivalid passwor
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:122)
+	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
 	at com.myp.gui.RegistrationTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(RegistrationTest.java:153)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)

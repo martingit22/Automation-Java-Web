@@ -47,54 +47,27 @@ public class LoginPage extends CommonMethodsForPOM {
         }
     }
 
-    public void verifyUnsuccessfulLogin() {
-        msgStatusAfterInvalidLogin();
-        String currentUrl = driver.getCurrentUrl();
-        Assert.assertFalse(currentUrl.contains("profile"), "User should not be redirected to profile page");
-
-        try {
-            WebElement profileLink = driver.findElement(By.id("profileLinkId"));
-            Assert.fail("Profile page should not be accessible with incorrect login");
-        } catch (NoSuchElementException e) {
-            System.out.println("CONFIRM # Profile page is not accessible with incorrect login");
-        }
-    }
-
-    public boolean isWelcomeMessageDisplayed() {
-        try {
-            WebElement welcomeMessage = driver.findElement(By.id("welcomeMessageId")); // Заменете с реалния идентификатор
-            return welcomeMessage.isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
-
-    public boolean isUserLoggedIn() {
-        boolean isUserLoggedIn = false;
-        System.out.println("ACTION @ Verifying if the user is logged in");
-
-        try {
-            wait.until(ExpectedConditions.visibilityOf(popUpMsg));
-            if (popUpMsg.getText().equals("Successful login!")) {
-                System.out.println("CONFIRM # User is logged in");
-                isUserLoggedIn = true;
-
-                try {
-                    WebElement profileLink = driver.findElement(By.id("profileLinkId"));
-                    profileLink.click();
-                    System.out.println("CONFIRM # Profile can be opened");
-                } catch (NoSuchElementException e) {
-                    System.out.println("ERROR ! Profile cannot be opened or not found");
-                    isUserLoggedIn = false;
-                }
-            } else {
-                System.out.println("ERROR ! User is not logged in");
-            }
-        } catch (TimeoutException e) {
-            System.out.println("ERROR ! User is not logged in");
-        }
-        return isUserLoggedIn;
-    }
+//    public void verifyUnsuccessfulLogin() {
+//        msgStatusAfterInvalidLogin();
+//        String currentUrl = driver.getCurrentUrl();
+//        Assert.assertFalse(currentUrl.contains("profile"), "User should not be redirected to profile page");
+//
+//        try {
+//            WebElement profileLink = driver.findElement(By.id("profileLinkId"));
+//            Assert.fail("Profile page should not be accessible with incorrect login");
+//        } catch (NoSuchElementException e) {
+//            System.out.println("CONFIRM # Profile page is not accessible with incorrect login");
+//        }
+//    }
+//
+//    public boolean isWelcomeMessageDisplayed() {
+//        try {
+//            WebElement welcomeMessage = driver.findElement(By.id("welcomeMessageId"));
+//            return welcomeMessage.isDisplayed();
+//        } catch (NoSuchElementException e) {
+//            return false;
+//        }
+//    }
 
 
     public void provideUserName(String userName) {
