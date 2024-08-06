@@ -41,9 +41,6 @@ public class CommonMethodsForPOM {
         element.clear();
         element.sendKeys(inputText);
     };
-
-    //This waiting strategy is very appropriate for a small demo test sites
-    //However if we want to execute quickly scripts a waiting utils will be needed
     public void waitPageTobeFullLoaded() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("return document.readyState").equals("complete");

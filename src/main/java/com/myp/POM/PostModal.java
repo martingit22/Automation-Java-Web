@@ -67,19 +67,15 @@ public class PostModal extends CommonMethodsForPOM {
 
     public void confirmDeletingPost() {
         try {
-            // Locate the confirm button within the delete-confirm div
             WebElement confirmDeletingPost = wait.until(ExpectedConditions.visibilityOfElementLocated(
                     By.xpath("//div[contains(@class, 'delete-confirm')]//button[contains(@class, 'btn') and contains(@class, 'btn-primary') and contains(@class, 'btn-sm')]")
             ));
 
-            // Debugging output
             System.out.println("Confirm delete button is displayed: " + confirmDeletingPost.isDisplayed());
             System.out.println("Confirm delete button is enabled: " + confirmDeletingPost.isEnabled());
 
-            // Click the confirm button
             confirmDeletingPost.click();
 
-            // Wait for the page or modal to be fully loaded
             waitPageTobeFullLoaded();
         } catch (TimeoutException e) {
             System.out.println("Timed out waiting for confirm delete button to be visible or clickable: " + e.getMessage());

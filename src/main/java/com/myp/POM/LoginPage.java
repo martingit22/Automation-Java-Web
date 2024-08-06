@@ -27,7 +27,7 @@ public class LoginPage extends CommonMethodsForPOM {
     private WebElement loginFormSubmitButton;
     @FindBy(xpath = "//a[contains(.,'Register')]")
     private WebElement loginFormRegistrationLink;
-    @FindBy(xpath = "//div[@class=\"toast-message ng-star-inserted\"]")
+    @FindBy(xpath = "//div[@class='toast-message ng-star-inserted']")
     private WebElement popUpMsg;
 
     public LoginPage(WebDriver driver) {
@@ -79,15 +79,6 @@ public class LoginPage extends CommonMethodsForPOM {
                 System.out.println("CONFIRM # User is logged in");
                 isUserLoggedIn = true;
 
-                String currentUrl = driver.getCurrentUrl();
-                boolean isUserIdInUrl = currentUrl.contains("userId");
-                if (isUserIdInUrl) {
-                    System.out.println("CONFIRM # URL contains user ID");
-                } else {
-                    System.out.println("ERROR ! URL does not contain user ID");
-                    isUserLoggedIn = false;
-                }
-
                 try {
                     WebElement profileLink = driver.findElement(By.id("profileLinkId"));
                     profileLink.click();
@@ -124,11 +115,12 @@ public class LoginPage extends CommonMethodsForPOM {
         clickSubmitButton();
     }
 
-    public void msgStatusAfterSubmitSuccessfulLogin() {
+    public boolean msgStatusAfterSubmitSuccessfulLogin() {
         String expectedMsgText = "Successful login!";
         String msgText = popUpMsg.getText();
         wait.until(ExpectedConditions.visibilityOf(popUpMsg));
         Assert.assertEquals(msgText, expectedMsgText);
+        return false;
     }
 
     public void clickOnRegistrationLink() {

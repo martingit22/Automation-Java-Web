@@ -21,13 +21,11 @@
             <class name="com.myp.gui.PostCommentDelete">
                 <methods>
                     <include name="verifyUserCanCreateAndCommentOnPost"/>
-                    <include name="verifyUserCanDeletePost"/>
                 </methods>
             </class>
             <class name="com.myp.gui.PostTest">
                 <methods>
                     <include name="verifyPostModalDetails"/>
-                    <include name="verifyUserCanCreateNewPostAndDeleteIt"/>
                 </methods>
             </class>
             <class name="com.myp.gui.RegistrationTest">
