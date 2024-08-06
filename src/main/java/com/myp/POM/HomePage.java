@@ -19,7 +19,7 @@ public class HomePage extends CommonMethodsForPOM {
     @FindBy(xpath = "//i[@class='fas fa-sign-out-alt fa-lg']")
     private WebElement navigationLogOutButton;
 
-    @FindBy(id = "loggedInUsername")
+    @FindBy(xpath = "//div[contains(@class, 'col-12')]//h2")
     private WebElement loggedInUsername;
 
     public HomePage(WebDriver driver) {

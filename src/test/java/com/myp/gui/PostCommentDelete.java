@@ -32,7 +32,6 @@ public class PostCommentDelete extends TestObject {
 
         HomePage homePage = new HomePage(super.getWebDriver());
 
-        // STEP 1: Open Skillo website home page and log in
         homePage.openHomePage();
         homePage.isUrlLoaded(HOME_PAGE_URL);
         homePage.clickOnNavigationLoginButton();
@@ -40,7 +39,6 @@ public class PostCommentDelete extends TestObject {
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         loginPage.loginWithUserAndPassword(user, password);
 
-        // STEP 2: Create a new post
         homePage.isNewPostButtonShown();
         homePage.clickOnNewPostButton();
         PostPage postPage = new PostPage(super.getWebDriver());
@@ -48,18 +46,15 @@ public class PostCommentDelete extends TestObject {
         postPage.providePostCaption(caption);
         postPage.clickCreatePostButton();
 
-        // STEP 3: Verify post creation
         ProfilePage profilePage = new ProfilePage(super.getWebDriver());
         profilePage.clickPost(0);
         PostModal postModal = new PostModal(super.getWebDriver());
         Assert.assertTrue(postModal.isImageVisible(), "The image is not visible!");
         Assert.assertEquals(postModal.getPostUser(), username, "The username does not match!");
 
-        // STEP 4: Comment on the post
         postModal.addComment(comment);
         postModal.submitComment();
 
-        // STEP 5: Verify the comment is added
         Assert.assertTrue(postModal.isCommentVisible(comment), "The comment is not visible!");
     }
 
@@ -73,7 +68,6 @@ public class PostCommentDelete extends TestObject {
 
         HomePage homePage = new HomePage(super.getWebDriver());
 
-        // STEP 1: Open Skillo website home page and log in
         homePage.openHomePage();
         homePage.isUrlLoaded(HOME_PAGE_URL);
         homePage.clickOnNavigationLoginButton();
@@ -85,10 +79,8 @@ public class PostCommentDelete extends TestObject {
         profilePage.clickOnProfileButton();
         profilePage.clickPost(0);
         PostModal postModal = new PostModal(super.getWebDriver());
-        // STEP 6: Delete the post
         postModal.clickOnBinIcon();
         postModal.confirmDeletingPost();
-        // STEP 7: Verify the post is deleted
         Assert.assertFalse(profilePage.isPostVisible(0), "The post was not deleted successfully!");
     }
     }

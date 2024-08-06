@@ -93,18 +93,6 @@ public class RegistrationPage extends CommonMethodsForPOM {
         wait.until(ExpectedConditions.visibilityOf(confirmPasswordInputField));
         return confirmPasswordInputField.getAttribute("placeholder");
     }
-//    public boolean isUserNamePlaceHolderCorrect(String expectedUserNamePlaceHolder) {
-//        boolean isPerRequirments = false;
-//        try {
-//            String actualUserNamePlaceHolder = getUserNamePlaceHolder();
-//            isPerRequirments = expectedUserNamePlaceHolder.equals(actualUserNamePlaceHolder);
-//
-//        } catch (NoSuchElementException e) {
-//            System.out.println("ERROR ! The username placeHolder is not correct");
-//            isPerRequirments = false;
-//        }
-//        return isPerRequirments;
-//    }
 
     public void printRegistrationErrorMessage() {
         try {

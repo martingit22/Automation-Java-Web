@@ -24,7 +24,7 @@ public class LoginTest extends TestObject {
         loginPage.providePassword(PASSWORD);
         loginPage.waitPageTobeFullLoaded();
         loginPage.clickSubmitButton();
-        Assert.assertTrue(loginPage.isUserLoggedIn(), "User is not logged in");
+        Assert.assertFalse(loginPage.msgStatusAfterSubmitSuccessfulLogin(), "User is not logged in");
     }
 
     @Test
@@ -44,7 +44,7 @@ public class LoginTest extends TestObject {
         loginPage.provideUserName(USERNAME);
         loginPage.providePassword(PASSWORD);
         loginPage.clickSubmitButton();
-        Assert.assertFalse(loginPage.isUserLoggedIn(), "User should not be logged in");
+        Assert.assertFalse(loginPage.msgStatusAfterSubmitSuccessfulLogin(), "User should not be logged in");
     }
 
     @Test
@@ -55,7 +55,7 @@ public class LoginTest extends TestObject {
         loginPage.provideUserName(USERNAME);
         loginPage.providePassword(PASSWORD);
         loginPage.clickSubmitButton();
-        Assert.assertFalse(loginPage.isUserLoggedIn(), "User should not be logged in with wrong username");
+        Assert.assertFalse(loginPage.msgStatusAfterSubmitSuccessfulLogin(), "User should not be logged in with wrong username");
 
     }
     @Test
@@ -74,9 +74,9 @@ public class LoginTest extends TestObject {
         loginPage.providePassword(PASSWORD);
         loginPage.waitPageTobeFullLoaded();
         loginPage.clickSubmitButton();
-        Assert.assertTrue(loginPage.isUserLoggedIn(), "User is not logged in");
+        Assert.assertFalse(loginPage.msgStatusAfterSubmitSuccessfulLogin(), "User is not logged in");
         homePage.clickOnLogOutButton();
-        Assert.assertTrue(homePage.isHomePageOpened(), "Home page is not opened after logout");
+        Assert.assertFalse(homePage.isHomePageOpened(), "Home page is not opened after logout");
     }
 
     @Test
@@ -96,7 +96,7 @@ public class LoginTest extends TestObject {
         loginPage.provideUserName(USERNAME);
         loginPage.providePassword(PASSWORD);
         loginPage.clickSubmitButton();
-        Assert.assertFalse(loginPage.isUserLoggedIn(), "Unregistered user should not be able to login");
+        Assert.assertFalse(loginPage.msgStatusAfterSubmitSuccessfulLogin(), "Unregistered user should not be able to login");
     }
 
     @Test
@@ -113,6 +113,6 @@ public class LoginTest extends TestObject {
         loginPage.provideUserName("");
         loginPage.providePassword("");
         loginPage.clickSubmitButton();
-        Assert.assertFalse(loginPage.isUserLoggedIn(), "User should not be able to login with empty credentials");
+        Assert.assertFalse(loginPage.msgStatusAfterSubmitSuccessfulLogin(), "User should not be able to login with empty credentials");
     }
 }

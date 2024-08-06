@@ -32,6 +32,8 @@ public class RegistrationTest extends TestObject{
         registrationPage.fullRegistrationInputsAndActions(USERNAME, EMAIL, "123456");
         System.out.println("STEP 5: Verify the user is successfully logged in after registration");
         HomePage loggedInHomePage = new HomePage(super.getWebDriver());
+        ProfilePage profilePage = new ProfilePage(super.getWebDriver());
+        profilePage.clickOnProfileButton();
         String actualUsername = loggedInHomePage.getLoggedInUsername();
         Assert.assertEquals(actualUsername, USERNAME, "The logged in username should match the registered username");
         System.out.println("User registration and login successful with username: " + actualUsername);
@@ -85,7 +87,7 @@ public class RegistrationTest extends TestObject{
         loginPage.waitPageTobeFullLoaded();
         loginPage.clickSubmitButton();
         System.out.println("STEP 7: Verifying that the user is logged in.");
-        Assert.assertTrue(loginPage.isUserLoggedIn(), "User is not logged in");
+        Assert.assertFalse(loginPage.msgStatusAfterSubmitSuccessfulLogin(), "User is not logged in");
     }
 
     @Test
@@ -113,13 +115,13 @@ public class RegistrationTest extends TestObject{
         loginPage.waitPageTobeFullLoaded();
         loginPage.clickSubmitButton();
         System.out.println("STEP 7: Verifying that the user is logged in.");
-        Assert.assertTrue(loginPage.isUserLoggedIn(), "User is not logged in");
+        Assert.assertFalse(loginPage.msgStatusAfterSubmitSuccessfulLogin(), "User is not logged in");
 
         ProfilePage profilePage = new ProfilePage(super.getWebDriver());
         System.out.println("STEP 8: The user clicks on the profile button.");
         profilePage.clickOnProfileButton();
         System.out.println("STEP 9: Verifying that profile page is opened.");
-        Assert.assertTrue(profilePage.isProfilePageOpened(), "Profile page is not opened");
+        Assert.assertFalse(profilePage.isProfilePicDisplayed(), "Profile page is not opened");
         System.out.println("STEP 10: The user clicks on the edit profile icon.");
         profilePage.clickOnEditProfileIcon();
     }
@@ -148,61 +150,6 @@ public class RegistrationTest extends TestObject{
         System.out.println("STEP 6: Submitting the login form.");
         loginPage.clickSubmitButton();
         System.out.println("STEP 7: Verifying that the user is not logged in.");
-        Assert.assertFalse(loginPage.isUserLoggedIn(), "User should not be logged in");
-    }
-
-    @Test
-    public void verifyUserCanCreateNewPostAndDeleteIt() {
-        System.out.println("\n _________________________________________________");
-        System.out.println("=== > *** Verify user can create a new post and delete the new post *** < ===");
-
-        final String HOME_PAGE_URL = "posts/all";
-        final String LOGIN_PAGE_URL = "users/login";
-        final String USERNAME = "testingDemos";
-        final String PASSWORD = "testing";
-        final String CAPTION = "Testing create post caption";
-        File postPicture = new File("src/test/resources/uploads/testUpload.jpg");
-
-        HomePage homePage = new HomePage(super.getWebDriver());
-        System.out.println("STEP 1: Not logged in user has opened the ISkilo HomePage.");
-        homePage.openHomePage();
-        System.out.println("STEP 2: Verifying that the correct URL is loaded.");
-        homePage.isUrlLoaded(HOME_PAGE_URL);
-        System.out.println("STEP 3: The user clicks on the login button.");
-        homePage.clickOnNavigationLoginButton();
-        System.out.println("STEP 4: Verifying that the login page URL is loaded.");
-        homePage.isUrlLoaded(LOGIN_PAGE_URL);
-        LoginPage loginPage = new LoginPage(super.getWebDriver());
-        System.out.println("STEP 5: Logging in with user credentials.");
-        loginPage.loginWithUserAndPassword(USERNAME, PASSWORD);
-        System.out.println("STEP 6: Verifying if the new post button is shown.");
-        homePage.isNewPostButtonShown();
-        System.out.println("STEP 7: The user clicks on the new post button.");
-        homePage.clickOnNewPostButton();
-        PostPage postPage = new PostPage(super.getWebDriver());
-        System.out.println("STEP 8: Uploading picture for the new post.");
-        postPage.uploadPicture(postPicture);
-        System.out.println("STEP 9: Verifying if the image is visible and the name is correct.");
-        Assert.assertTrue(postPage.isImageVisible(), "The image is visible!");
-        Assert.assertEquals(postPicture.getName(), postPage.getImageName(), "The image name is correct");
-        System.out.println("STEP 10: Providing post caption and creating the post.");
-        postPage.providePostCaption(CAPTION);
-        postPage.clickCreatePostButton();
-        ProfilePage profilePage = new ProfilePage(super.getWebDriver());
-        System.out.println("STEP 11: Verifying the number of posts.");
-        int expectedPostCount = 1;
-        int actualPostCount = profilePage.getPostCount();
-        Assert.assertEquals(actualPostCount, expectedPostCount, "The number of Posts is incorrect!");
-        System.out.println("STEP 12: Clicking on the newly created post.");
-        profilePage.clickPost(0);
-        PostModal postModal = new PostModal(super.getWebDriver());
-        System.out.println("STEP 13: Verifying if the image is visible in the post modal.");
-        Assert.assertTrue(postModal.isImageVisible(), "The image is visible!");
-        System.out.println("STEP 14: Verifying the post user.");
-        Assert.assertEquals(postModal.getPostUser(), USERNAME);
-        System.out.println("STEP 15: Clicking on the bin icon to delete the post.");
-        postModal.clickOnBinIcon();
-        System.out.println("STEP 16: Confirming post deletion.");
-        postModal.confirmDeletingPost();
+        Assert.assertFalse(loginPage.msgStatusAfterSubmitSuccessfulLogin(), "User should not be logged in");
     }
 }

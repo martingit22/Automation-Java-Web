@@ -12,8 +12,8 @@ public class EndToEndTest extends TestObject {
     private static final String BASE_URL = "http://training.skillo-bg.com:4200/";
     private static final String REGISTER_PAGE_URL = BASE_URL + "users/register";
     private static final String POST_URL = BASE_URL + "posts/all";
-    private static final String NEW_USERNAME = "begsie24";
-    private static final String EMAIL = "goldverrsss@abv.bg";
+    private static final String NEW_USERNAME = "avtomatichentest1000";
+    private static final String EMAIL = "avtomatiik@abv.bg";
     private static final String REG_PASSWORD = "Ortoparisi";
     private static final String CONFIRM_PASSWORD = "Ortoparisi";
     private File postPicture = new File("src\\test\\resources\\uploads\\testImg.jpg");
