@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="92.502" tests="14" errors="0" skipped="0" failures="5">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="96.426" tests="14" errors="0" skipped="0" failures="5">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="webdriver.chrome.driver" value="C:\Users\mpana\.cache\selenium\chromedriver\win64\127.0.6533.88\chromedriver.exe"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\mpana\AppData\Local\Temp\surefire4351087508192193268\surefirebooter-20240806105057101_3.jar C:\Users\mpana\AppData\Local\Temp\surefire4351087508192193268 2024-08-06T10-50-56_786-jvmRun1 surefire-20240806105057101_1tmp surefire_0-20240806105057101_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\mpana\AppData\Local\Temp\surefire14713845631747944191\surefirebooter-20240806122722209_3.jar C:\Users\mpana\AppData\Local\Temp\surefire14713845631747944191 2024-08-06T12-27-21_932-jvmRun1 surefire-20240806122722209_1tmp surefire_0-20240806122722209_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\mpana\Desktop\Automation-Java-Web\Automation Java Web\target\test-classes;C:\Users\mpana\Desktop\Automation-Java-Web\Automation Java Web\target\classes;C:\Users\mpana\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\mpana\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\mpana\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\mpana\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-java\4.21.0\selenium-java-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-api\4.21.0\selenium-api-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.21.0\selenium-chrome-driver-4.21.0.jar;C:\Users\mpana\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.21.0\selenium-chromium-driver-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-json\4.21.0\selenium-json-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.21.0\selenium-manager-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.21.0\selenium-devtools-v123-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.21.0\selenium-devtools-v124-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.21.0\selenium-devtools-v125-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.21.0\selenium-devtools-v85-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.21.0\selenium-edge-driver-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.21.0\selenium-firefox-driver-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-http\4.21.0\selenium-http-4.21.0.jar;C:\Users\mpana\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.21.0\selenium-ie-driver-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.21.0\selenium-remote-driver-4.21.0.jar;C:\Users\mpana\.m2\repository\com\google\guava\guava\33.2.0-jre\guava-33.2.0-jre.jar;C:\Users\mpana\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\mpana\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\mpana\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\mpana\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\mpana\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\mpana\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\opentelemetry-api\1.38.0\opentelemetry-api-1.38.0.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\opentelemetry-context\1.38.0\opentelemetry-context-1.38.0.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.38.0\opentelemetry-exporter-logging-1.38.0.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.38.0\opentelemetry-sdk-common-1.38.0.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.38.0\opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.38.0\opentelemetry-sdk-extension-autoconfigure-1.38.0.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.38.0-alpha\opentelemetry-api-incubator-1.38.0-alpha.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.38.0\opentelemetry-sdk-trace-1.38.0.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.38.0\opentelemetry-sdk-1.38.0.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.38.0\opentelemetry-sdk-metrics-1.38.0.jar;C:\Users\mpana\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.38.0\opentelemetry-sdk-logs-1.38.0.jar;C:\Users\mpana\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-os\4.21.0\selenium-os-4.21.0.jar;C:\Users\mpana\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.21.0\selenium-safari-driver-4.21.0.jar;C:\Users\mpana\.m2\repository\org\seleniumhq\selenium\selenium-support\4.21.0\selenium-support-4.21.0.jar;C:\Users\mpana\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\mpana\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\mpana\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\mpana\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\mpana\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\mpana\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\mpana\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\mpana\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\mpana\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\mpana\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\mpana\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\mpana\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\mpana\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\mpana\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\mpana\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\mpana\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\mpana\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\mpana\.m2\repository\org\apache\commons\commons-compress\1.26.1\commons-compress-1.26.1.jar;C:\Users\mpana\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\mpana\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\mpana\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\mpana\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\mpana\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\mpana\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\mpana\.m2\repository\org\apache\logging\log4j\log4j-core\2.23.1\log4j-core-2.23.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\mpana\AppData\Local\Temp\surefire4351087508192193268\surefirebooter-20240806105057101_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\mpana\AppData\Local\Temp\surefire14713845631747944191\surefirebooter-20240806122722209_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.1+12-LTS-29"/>
@@ -60,7 +60,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="endToEndTest[src\test\resources\uploads\testUpload.jpg, Testing create post caption](1)" classname="com.myp.gui.EndToEndTest" time="6.752">
+  <testcase name="endToEndTest[src\test\resources\uploads\testUpload.jpg, Testing create post caption](1)" classname="com.myp.gui.EndToEndTest" time="7.592">
     <system-out><![CDATA[All files are deleted in Directory: src/test/resources/reports/
 All files are deleted in Directory: src/test/resources/screenshots/
 
@@ -115,27 +115,35 @@ RESULT: The post is deleted.
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Aug 06, 2024 10:50:59 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Aug 06, 2024 12:27:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyAlreadyRegisteredUserCanSuccessfullyLogin" classname="com.myp.gui.LoginTest" time="3.642">
+  <testcase name="verifyAlreadyRegisteredUserCanSuccessfullyLogin" classname="com.myp.gui.LoginTest" time="2.944">
     <system-out><![CDATA[The driver is about to be closed.
 
  _________________________________________________
-=== > *** Verify already registered user can successfully login in the system  *** < ===
+=== > *** Verify already registered user can successfully login in the system *** < ===
+STEP 1: Open home page
 DOM tree is fully loaded
 ACTION @ The user is verifying if the Home page is opened
 CONFIRM # Home page is opened
+STEP 2: Click on navigation login button
 The user has clicked on element
+STEP 3: Verify login page is opened
+STEP 4: Provide username: megamare
+STEP 5: Provide password
+STEP 6: Wait for the page to fully load
 DOM tree is fully loaded
+STEP 7: Click submit button
 The user has clicked on element
+STEP 8: Verify user is logged in
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:51:06 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:27:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword" classname="com.myp.gui.LoginTest" time="2.614">
+  <testcase name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword" classname="com.myp.gui.LoginTest" time="2.466">
     <failure message="expected [Successful login!] but found [Ivalid password]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successful login!] but found [Ivalid password]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -143,8 +151,8 @@ WARNING: Unable to find an exact match for CDP version 127, returning the closes
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:122)
-	at com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:47)
+	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
+	at com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:75)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -179,24 +187,31 @@ WARNING: Unable to find an exact match for CDP version 127, returning the closes
     <system-out><![CDATA[The driver is about to be closed.
 
  _________________________________________________
-=== > *** Verify already registered user can not successfully login with wrong password *** < ===
+=== > *** Verify already registered user cannot successfully login with wrong password *** < ===
+STEP 1: Open home page
 DOM tree is fully loaded
 ACTION @ The user is verifying if the Home page is opened
 CONFIRM # Home page is opened
+STEP 2: Click on navigation login button
 The user has clicked on element
+STEP 3: Verify login page is opened
+STEP 4: Provide username: megamare
+STEP 5: Provide incorrect password
+STEP 6: Click submit button
 The user has clicked on element
+STEP 7: Verify user is not logged in
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:51:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:27:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername" classname="com.myp.gui.LoginTest" time="21.608">
+  <testcase name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername" classname="com.myp.gui.LoginTest" time="21.631">
     <failure message="Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.name: usernameOrEmail&apos; (tried for 10 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: usernameOrEmail' (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at com.myp.POM.CommonMethodsForPOM.typeTextInField(CommonMethodsForPOM.java:40)
-	at com.myp.POM.LoginPage.provideUserName(LoginPage.java:101)
-	at com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername(LoginTest.java:55)
+	at com.myp.POM.LoginPage.provideUserName(LoginPage.java:74)
+	at com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername(LoginTest.java:90)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -233,9 +248,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b021f2a05fe32eba9aee5b362a58ad94, findElement {value=usernameOrEmail, using=name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\mpana\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50893}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50893/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b021f2a05fe32eba9aee5b362a58ad94
+Command: [898f3bd5eeaa1cb6105843456aeba858, findElement {value=usernameOrEmail, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\mpana\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52969}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52969/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 898f3bd5eeaa1cb6105843456aeba858
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -261,30 +276,44 @@ Session ID: b021f2a05fe32eba9aee5b362a58ad94
 ]]></failure>
     <system-out><![CDATA[Screenshot saved at: src\test\resources\screenshots\verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword.jpg
 The driver is about to be closed.
+
+ _________________________________________________
+=== > *** Verify already registered user cannot successfully login with wrong username *** < ===
+STEP 1: Open login page directly
+STEP 2: Provide incorrect username: WRONG
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:51:15 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:27:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyUserCanSuccessfullyLogout" classname="com.myp.gui.LoginTest" time="12.529">
+  <testcase name="verifyUserCanSuccessfullyLogout" classname="com.myp.gui.LoginTest" time="12.295">
     <system-out><![CDATA[Screenshot saved at: src\test\resources\screenshots\verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername.jpg
 The driver is about to be closed.
 
  _________________________________________________
 === > *** Verify user can successfully logout from the system *** < ===
+STEP 1: Open home page
 DOM tree is fully loaded
+STEP 2: Click on navigation login button
 The user has clicked on element
+STEP 3: Provide username: megamare
+STEP 4: Provide password
+STEP 5: Wait for the page to fully load
 DOM tree is fully loaded
+STEP 6: Click submit button
 The user has clicked on element
+STEP 7: Verify user is logged in
+STEP 8: Click on logout button
 The user has clicked on element
+STEP 9: Verify home page is opened after logout
 ACTION @ The user is verifying if the Home page is opened
 ERROR ! Home page is not opened
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:51:38 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:28:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyUnregisteredUserCannotLogin" classname="com.myp.gui.LoginTest" time="2.242">
+  <testcase name="verifyUnregisteredUserCannotLogin" classname="com.myp.gui.LoginTest" time="2.639">
     <failure message="expected [Successful login!] but found [User not found]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successful login!] but found [User not found]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -292,8 +321,8 @@ WARNING: Unable to find an exact match for CDP version 127, returning the closes
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:122)
-	at com.myp.gui.LoginTest.verifyUnregisteredUserCannotLogin(LoginTest.java:99)
+	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
+	at com.myp.gui.LoginTest.verifyUnregisteredUserCannotLogin(LoginTest.java:170)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -329,17 +358,24 @@ WARNING: Unable to find an exact match for CDP version 127, returning the closes
 
  _________________________________________________
 === > *** Verify unregistered user cannot login in the system *** < ===
+STEP 1: Open home page
 DOM tree is fully loaded
 ACTION @ The user is verifying if the Home page is opened
 CONFIRM # Home page is opened
+STEP 2: Click on navigation login button
 The user has clicked on element
+STEP 3: Verify login page is opened
+STEP 4: Provide username: unregisteredUser
+STEP 5: Provide password
+STEP 6: Click submit button
 The user has clicked on element
+STEP 7: Verify unregistered user cannot login
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:51:51 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:28:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyUserCannotLoginWithEmptyCredentials" classname="com.myp.gui.LoginTest" time="2.616">
+  <testcase name="verifyUserCannotLoginWithEmptyCredentials" classname="com.myp.gui.LoginTest" time="3.298">
     <failure message="expected [Successful login!] but found [UsernameOrEmail cannot be empty]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successful login!] but found [UsernameOrEmail cannot be empty]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -347,8 +383,8 @@ WARNING: Unable to find an exact match for CDP version 127, returning the closes
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:122)
-	at com.myp.gui.LoginTest.verifyUserCannotLoginWithEmptyCredentials(LoginTest.java:116)
+	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
+	at com.myp.gui.LoginTest.verifyUserCannotLoginWithEmptyCredentials(LoginTest.java:200)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -385,39 +421,60 @@ The driver is about to be closed.
 
  _________________________________________________
 === > *** Verify user cannot login with empty credentials *** < ===
+STEP 1: Open home page
 DOM tree is fully loaded
 ACTION @ The user is verifying if the Home page is opened
 CONFIRM # Home page is opened
+STEP 2: Click on navigation login button
 The user has clicked on element
+STEP 3: Verify login page is opened
+STEP 4: Provide empty username
+STEP 5: Provide empty password
+STEP 6: Click submit button
 The user has clicked on element
+STEP 7: Verify user cannot login with empty credentials
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:51:55 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:28:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyUserCanCreateAndCommentOnPost[megamare, ortoparisi, megamare, src\test\resources\uploads\testUpload.jpg, Testing create post caption, This is a test comment](1)" classname="com.myp.gui.PostCommentDelete" time="5.563">
+  <testcase name="verifyUserCanCreateAndCommentOnPost[megamare, ortoparisi, megamare, src\test\resources\uploads\testUpload.jpg, Testing create post caption, This is a test comment](1)" classname="com.myp.gui.PostCommentDelete" time="5.61">
     <system-out><![CDATA[Screenshot saved at: src\test\resources\screenshots\verifyUserCannotLoginWithEmptyCredentials.jpg
 The driver is about to be closed.
 
  _________________________________________________
 === > *** Verify user can create and comment on a post *** < ===
+STEP 1: Open home page
 DOM tree is fully loaded
 DOM tree is fully loaded
+STEP 2: Click on navigation login button
 The user has clicked on element
 DOM tree is fully loaded
+STEP 3: Log in with credentials - User: megamare
 The user has clicked on element
+STEP 4: Verify new post button is shown
 ACTION @ The user is verifying if the navigation New Post button is presented
 CONFIRM # Navigation New Post button is presented to the user
+STEP 5: Click on new post button
 The user has clicked on element
+STEP 6: Upload picture from file: C:\Users\mpana\Desktop\Automation-Java-Web\Automation Java Web\src\test\resources\uploads\testUpload.jpg
 CONFIRMATION # The file was successfully uploaded
+STEP 7: Provide post caption: Testing create post caption
 CONFIRMATION # The user has provided caption text :Testing create post caption
+STEP 8: Click create post button
 CONFIRMATION # The user has clicked on create post button
+STEP 9: Click on the first post in profile page
+STEP 10: Verify the image is visible
+STEP 11: Verify the post username: megamare
+STEP 12: Add comment: This is a test comment
+STEP 13: Submit comment
+STEP 14: Verify the comment is visible
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:51:58 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:28:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyPostModalDetails" classname="com.myp.gui.PostTest" time="3.379">
+  <testcase name="verifyPostModalDetails" classname="com.myp.gui.PostTest" time="3.973">
     <system-out><![CDATA[The driver is about to be closed.
 
  _________________________________________________
@@ -439,17 +496,17 @@ The user has clicked on element
 STEP 7: Verifying post modal details
 Post modal details verified successfully.
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:52:05 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:28:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyUserCanRegisterWithValidData" classname="com.myp.gui.RegistrationTest" time="3.349">
+  <testcase name="verifyUserCanRegisterWithValidData" classname="com.myp.gui.RegistrationTest" time="4.134">
     <system-out><![CDATA[The driver is about to be closed.
 
  _________________________________________________
 === > *** Verify user can register in the system with valid data *** < ===
-THE RANDOM GENERATED USERNAME IS: 512Student
-THE RANDOM GENERATED EMAIL IS: 105210512@abv.bg
+THE RANDOM GENERATED USERNAME IS: 907Student
+THE RANDOM GENERATED EMAIL IS: 122837907@abv.bg
 STEP 1: Not logged in user has opened the ISkilo HomePage.
 DOM tree is fully loaded
 The user has clicked on element
@@ -459,13 +516,13 @@ STEP 4: The user provides registration data
 The user has clicked on element
 STEP 5: Verify the user is successfully logged in after registration
 The user has clicked on element
-User registration and login successful with username: 512Student
+User registration and login successful with username: 907Student
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:52:10 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:28:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyUserCannotRegisterWithInvalidData" classname="com.myp.gui.RegistrationTest" time="2.24">
+  <testcase name="verifyUserCannotRegisterWithInvalidData" classname="com.myp.gui.RegistrationTest" time="2.611">
     <system-out><![CDATA[The driver is about to be closed.
 
  _________________________________________________
@@ -481,11 +538,11 @@ The user has clicked on element
 STEP 5: Checking if registration error message is displayed.
 Registration Error Message: Email invalid!
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:52:14 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:28:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyAlreadyRegisteredUserCanSuccessfullyLogin" classname="com.myp.gui.RegistrationTest" time="3.114">
+  <testcase name="verifyAlreadyRegisteredUserCanSuccessfullyLogin" classname="com.myp.gui.RegistrationTest" time="2.907">
     <system-out><![CDATA[The driver is about to be closed.
 
  _________________________________________________
@@ -504,11 +561,11 @@ DOM tree is fully loaded
 The user has clicked on element
 STEP 7: Verifying that the user is logged in.
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:52:17 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:28:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndNavigateToEditProfile" classname="com.myp.gui.RegistrationTest" time="3.693">
+  <testcase name="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndNavigateToEditProfile" classname="com.myp.gui.RegistrationTest" time="3.683">
     <system-out><![CDATA[The driver is about to be closed.
 
  _________________________________________________
@@ -532,11 +589,11 @@ STEP 9: Verifying that profile page is opened.
 STEP 10: The user clicks on the edit profile icon.
 The user has clicked on element
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:52:21 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:28:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>
-  <testcase name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword" classname="com.myp.gui.RegistrationTest" time="2.532">
+  <testcase name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword" classname="com.myp.gui.RegistrationTest" time="3.13">
     <failure message="expected [Successful login!] but found [Ivalid password]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successful login!] but found [Ivalid password]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -544,7 +601,7 @@ WARNING: Unable to find an exact match for CDP version 127, returning the closes
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:122)
+	at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
 	at com.myp.gui.RegistrationTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(RegistrationTest.java:153)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -594,7 +651,7 @@ STEP 6: Submitting the login form.
 The user has clicked on element
 STEP 7: Verifying that the user is not logged in.
 ]]></system-out>
-    <system-err><![CDATA[Aug 06, 2024 10:52:26 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 06, 2024 12:28:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 125; Please update to a Selenium version that supports CDP version 127
 ]]></system-err>
   </testcase>

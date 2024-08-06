@@ -12,8 +12,8 @@ public class EndToEndTest extends TestObject {
     private static final String BASE_URL = "http://training.skillo-bg.com:4200/";
     private static final String REGISTER_PAGE_URL = BASE_URL + "users/register";
     private static final String POST_URL = BASE_URL + "posts/all";
-    private static final String NEW_USERNAME = "avtomatichentest1000";
-    private static final String EMAIL = "avtomatiik@abv.bg";
+    private static final String NEW_USERNAME = "automatictest500";
+    private static final String EMAIL = "automatic@abv.bg";
     private static final String REG_PASSWORD = "Ortoparisi";
     private static final String CONFIRM_PASSWORD = "Ortoparisi";
     private File postPicture = new File("src\\test\\resources\\uploads\\testImg.jpg");
@@ -59,20 +59,21 @@ public class EndToEndTest extends TestObject {
         System.out.println("STEP:6 Login out");
         homePage.clickOnLogOutButton();
         System.out.println("RESULT: The user is logged out");
+
         LoginPage loginPage = new LoginPage(super.getWebDriver());
         System.out.println("STEP 7: Verify that the user is on login page.");
         Assert.assertTrue(loginPage.isLoginPageOpened(), "Login page is not loaded.");
         System.out.println("STEP 8: Checking the placeholders of the login page.");
-        // Add placeholder checks if needed
-
         System.out.println("STEP 9: Marking the 'remember me' check box.");
         loginPage.selectingRememberMeCheckBox();
 
         System.out.println("STEP 10: Entering credentials of the newly registered user and submitting.");
         loginPage.loginWithUserAndPassword(NEW_USERNAME, REG_PASSWORD);
+
         System.out.println("STEP 11: Verifying the submit message.");
         String successMessage = registrationPage.getRegistrationSuccessMessage();
         Assert.assertTrue(successMessage.contains("Successful login!"), "Registration success message is not displayed or incorrect.");
+
         System.out.println("STEP 13: Navigating to 'New post'.");
         homePage.clickOnNewPostButton();
         PostPage postPage = new PostPage(super.getWebDriver());
@@ -87,16 +88,15 @@ public class EndToEndTest extends TestObject {
         postPage.clickCreatePostButton();
 
         System.out.println("STEP 17: Verifying the post count.");
-        ProfilePage profilePage = new ProfilePage(super.getWebDriver()); // Assuming ProfilePage shows posts
+        ProfilePage profilePage = new ProfilePage(super.getWebDriver());
         int postCountBefore = profilePage.getPostCount();
-        profilePage.clickOnProfileButton(); // Make sure to navigate to the right page or update if needed
+        profilePage.clickOnProfileButton();
         int postCountAfter = profilePage.getPostCount();
         Assert.assertEquals(postCountAfter, postCountBefore + 0, "Post count did not increase as expected.");
 
         System.out.println("STEP 18: Open the new post.");
         profilePage.clickOnProfileButton();
-
-        profilePage.openLatestPost(); // Ensure this method is implemented correctly in ProfilePage
+        profilePage.openLatestPost();
 
         PostModal postModal = new PostModal(super.getWebDriver());
         System.out.println("STEP 19: Verifying that the image is visible and the username is correct.");
