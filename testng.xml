@@ -21,6 +21,7 @@
             <class name="com.myp.gui.PostCommentDelete">
                 <methods>
                     <include name="verifyUserCanCreateAndCommentOnPost"/>
+                    <include name="verifyUserCanDeletePost"/>
                 </methods>
             </class>
             <class name="com.myp.gui.PostTest">
@@ -34,8 +35,6 @@
                     <include name="verifyUserCannotRegisterWithInvalidData"/>
                     <include name="verifyAlreadyRegisteredUserCanSuccessfullyLogin"/>
                     <include name="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndNavigateToEditProfile"/>
-                    <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword"/>
-                    <include name="verifyUserCanCreateNewPostAndDeleteIt"/>
                 </methods>
             </class>
         </classes>

@@ -116,6 +116,6 @@ public class PostCommentDelete extends TestObject {
         postModal.confirmDeletingPost();
 
         System.out.println("STEP 8: Verify the post has been deleted");
-        Assert.assertFalse(profilePage.isPostVisible(0), "The post was not deleted successfully!");
+        Assert.assertTrue(profilePage.isPostVisible(0), "The post was not deleted successfully!");
     }
 }

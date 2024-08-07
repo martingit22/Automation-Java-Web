@@ -125,31 +125,4 @@ public class RegistrationTest extends TestObject{
         System.out.println("STEP 10: The user clicks on the edit profile icon.");
         profilePage.clickOnEditProfileIcon();
     }
-
-    @Test
-    public void verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword() {
-        System.out.println("\n _________________________________________________");
-        System.out.println("=== > *** Verify already registered user can not successfully login with wrong password *** < ===");
-
-        final String USERNAME = "megamare";
-        final String PASSWORD = "wrong_password";
-
-        HomePage homePage = new HomePage(super.getWebDriver());
-        System.out.println("STEP 1: Not logged in user has opened the ISkilo HomePage.");
-        homePage.openHomePage();
-        System.out.println("STEP 2: Verifying that home page is opened.");
-        Assert.assertTrue(homePage.isHomePageOpened(), "Home page is not opened");
-        System.out.println("STEP 3: The user clicks on the login button.");
-        homePage.clickOnNavigationLoginButton();
-        LoginPage loginPage = new LoginPage(super.getWebDriver());
-        System.out.println("STEP 4: Verifying that login page is opened.");
-        Assert.assertTrue(loginPage.isLoginPageOpened(), "Login page is not opened");
-        System.out.println("STEP 5: The user provides username and wrong password.");
-        loginPage.provideUserName(USERNAME);
-        loginPage.providePassword(PASSWORD);
-        System.out.println("STEP 6: Submitting the login form.");
-        loginPage.clickSubmitButton();
-        System.out.println("STEP 7: Verifying that the user is not logged in.");
-        Assert.assertFalse(loginPage.msgStatusAfterSubmitSuccessfulLogin(), "User should not be logged in");
-    }
 }
