@@ -4,15 +4,16 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.List;
 
 public class ProfilePage extends CommonMethodsForPOM {
 
     @FindBy(xpath = "//div[@id='navbarColor01']//a[@id='nav-link-profile' and contains(@class, 'nav-link')]")
     private WebElement navToProfileButton;
-
 
     @FindBy(className = "fa-user-edit")
     private WebElement editProfileIcon;
@@ -23,9 +24,20 @@ public class ProfilePage extends CommonMethodsForPOM {
     @FindBy(xpath = "//div[@class='image-container']")
     private WebElement imgSource;
 
+    @FindBy(tagName = "h2")
+    private WebElement usernameElement;
+
+    @FindBy(xpath = "//li[strong[@class='profile-stat-count']]")
+    private WebElement postCountElement;
+
+    @FindBy(className = "gallery-item")
+    private List<WebElement> posts;
+
+    private WebDriverWait wait;
 
     public ProfilePage(WebDriver driver) {
         super(driver);
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
 
@@ -38,15 +50,13 @@ public class ProfilePage extends CommonMethodsForPOM {
     }
 
     public String getUsername() {
-        WebElement username = driver.findElement(By.tagName("h2"));
-        return username.getText();
+        return usernameElement.getText();
     }
 
     public int getPostCount() {
         try {
-            WebElement postCountElement = driver.findElement(By.xpath("//li[strong[@class='profile-stat-count']]"));
             WebElement strongElement = postCountElement.findElement(By.xpath(".//strong[@class='profile-stat-count']"));
-            String postCountText = strongElement.getText().replaceAll("[^0-9]", ""); // Remove non-numeric characters
+            String postCountText = strongElement.getText().replaceAll("[^0-9]", "");
             return Integer.parseInt(postCountText);
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,8 +65,11 @@ public class ProfilePage extends CommonMethodsForPOM {
     }
 
     public void clickPost(int postIndex) {
-        List<WebElement> posts = driver.findElements(By.tagName("app-post"));
-        posts.get(postIndex).click();
+        if (postIndex < 0 || postIndex >= posts.size()) {
+            throw new IndexOutOfBoundsException("Post index out of range");
+        }
+        WebElement post = posts.get(postIndex);
+        click(post);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("return document.readyState").equals("complete");
@@ -77,6 +90,7 @@ public class ProfilePage extends CommonMethodsForPOM {
             return false;
         }
     }
+
     public boolean isPostVisible(int postIndex) {
         try {
             WebElement post = driver.findElement(By.xpath("//div[@class='post-img'][position()=" + (postIndex + 1) + "]"));
@@ -87,8 +101,6 @@ public class ProfilePage extends CommonMethodsForPOM {
     }
 
     public void openLatestPost() {
-        List<WebElement> posts = driver.findElements(By.className("gallery-item"));
-
         wait.until(ExpectedConditions.visibilityOfAllElements(posts));
 
         if (posts.isEmpty()) {

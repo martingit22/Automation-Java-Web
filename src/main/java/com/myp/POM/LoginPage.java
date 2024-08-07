@@ -47,29 +47,6 @@ public class LoginPage extends CommonMethodsForPOM {
         }
     }
 
-//    public void verifyUnsuccessfulLogin() {
-//        msgStatusAfterInvalidLogin();
-//        String currentUrl = driver.getCurrentUrl();
-//        Assert.assertFalse(currentUrl.contains("profile"), "User should not be redirected to profile page");
-//
-//        try {
-//            WebElement profileLink = driver.findElement(By.id("profileLinkId"));
-//            Assert.fail("Profile page should not be accessible with incorrect login");
-//        } catch (NoSuchElementException e) {
-//            System.out.println("CONFIRM # Profile page is not accessible with incorrect login");
-//        }
-//    }
-//
-//    public boolean isWelcomeMessageDisplayed() {
-//        try {
-//            WebElement welcomeMessage = driver.findElement(By.id("welcomeMessageId"));
-//            return welcomeMessage.isDisplayed();
-//        } catch (NoSuchElementException e) {
-//            return false;
-//        }
-//    }
-
-
     public void provideUserName(String userName) {
         typeTextInField(usernameInputField, userName);
     }

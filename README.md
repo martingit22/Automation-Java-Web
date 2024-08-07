@@ -20,44 +20,35 @@
 Java Maven project for automated testing with Selenium WebDriver and TestNG. Utilizes Page Object Model design pattern and Page Factory. Tests include login, navigation, and form submissions on Chrome browser. Screenshots captured on test failures.
 
 ## Test activities performed with Selenium 4+ and TestNG Java unit framework:
-**Registration Feature**
-- Verify user can register in the system with valid data
-
-- Verify user cannot register in the system with invalid data
-
 **Login Feature**
 
-- Verify already registered user can successfully login in the system
+- Verify already registered user can successfully login and navigate to edit profile.
+- Verify already registered user can NOT successfully login with wrong password.
+- Verify already registered user can NOT successfully login with wrong username.
+- Verify user can successfully logout.
+- Verify unregistered user cannot login.
+- Verify user cannot login with empty credentials.
 
-- Verify already registered user can successfully login and navigate to edit profile
-
-- Verify already registered user can NOT successfully login with wrong password
-
-- Verify already registered user can NOT successfully login with wrong username
-
-- Verify already registered user can NOT successfully login with no credentials
+**Post Comment and Delete Feature**
+- Verify user can create and comment on post.
+- Verify user can delete post.
 
 **Post Feature**
-- Verify user can create and comment on a post
+- Verify post modal details.
 
-- Verify user can delete a post
+**Registration Test Feature**
+- Verify user can register in the system with valid data.
+- Verify user cannot register in the system with invalid data.
+- Verify already registered user can successfully login in the system.
+- Verify already registered user can successfully login and navigate to edit profile.
 
-- Verify post modal details
+**End-to-End Feature**
 
-**Comment Feature**
-- Verify user can create a new post and comment on it
-- Verify user can delete a comment on a post
-
-**Logout Feature**
-- Verify user can successfully logout from the system
-
-**Additional Features**
-- Verify user can view their profile after logging in
-- Verify user can upload a profile picture
-- Verify user can update profile information
-- Verify the home page displays user posts correctly
-- Verify the login page handles incorrect username and password inputs correctly
-- Verify the registration page handles already registered email correctly
+- Verify home page load.
+- Verify registration page navigation.
+- Verify registration page placeholders.
+- Verify user can create new post.
+- Verify post details.
 ## Installation
 
 - Clone the repository

@@ -11,11 +11,11 @@ public class RegistrationPage extends CommonMethodsForPOM {
 
     public static final String REGISTER_PAGE_URL = "users/register";
 
-    @FindBy(xpath = "/html/body/app-root/div[2]/app-register/div/div/form/h4")
+    @FindBy(xpath = "//div[contains(@class, 'app-register')]//h4")
     private WebElement registerPageHeaderTitle;
-    @FindBy(xpath = "/html/body/app-root/div[2]/app-register/div/div/form/div[1]/input")
+    @FindBy(xpath = "//input[@placeholder='Username']")
     private WebElement usernameInputField;
-    @FindBy(xpath = "/html/body/app-root/div[2]/app-register/div/div/form/div[2]/input")
+    @FindBy(xpath = "//input[@placeholder='email']")
     private WebElement emailInputField;
     @FindBy(xpath = "//*[@id=\"defaultRegisterFormPassword\"]")
     private WebElement passwordInputField;

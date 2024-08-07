@@ -3,15 +3,6 @@
 <suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="C:/Users/mpana/Desktop/Automation-Java-Web/Automation Java Web(failed)" verbose="0">
     <classes>
-      <class name="com.myp.gui.RegistrationTest">
-        <methods>
-          <include name="setUpTest"/>
-          <include name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword"/>
-          <include name="setupTestSuite"/>
-          <include name="tearDownTest"/>
-          <include name="cleanFiles"/>
-        </methods>
-      </class> <!-- com.myp.gui.RegistrationTest -->
       <class name="com.myp.gui.LoginTest">
         <methods>
           <include name="verifyUnregisteredUserCannotLogin"/>
@@ -24,6 +15,15 @@
           <include name="cleanFiles"/>
         </methods>
       </class> <!-- com.myp.gui.LoginTest -->
+      <class name="com.myp.gui.EndToEndTest">
+        <methods>
+          <include name="setUpTest"/>
+          <include name="setupTestSuite"/>
+          <include name="tearDownTest"/>
+          <include name="cleanFiles"/>
+          <include name="endToEndTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.myp.gui.EndToEndTest -->
     </classes>
   </test> <!-- C:/Users/mpana/Desktop/Automation-Java-Web/Automation Java Web(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

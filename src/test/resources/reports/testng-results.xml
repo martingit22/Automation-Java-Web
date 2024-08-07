@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="14" passed="9" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-06T12:27:23 EEST" name="All Test Suite" finished-at="2024-08-06T12:28:58 EEST" duration-ms="95021">
+  <suite started-at="2024-08-07T14:39:16 EEST" name="All Test Suite" finished-at="2024-08-07T14:40:57 EEST" duration-ms="101235">
     <groups>
     </groups>
-    <test started-at="2024-08-06T12:27:23 EEST" name="C:/Users/mpana/Desktop/Automation-Java-Web/Automation Java Web" finished-at="2024-08-06T12:28:58 EEST" duration-ms="95021">
+    <test started-at="2024-08-07T14:39:16 EEST" name="C:/Users/mpana/Desktop/Automation-Java-Web/Automation Java Web" finished-at="2024-08-07T14:40:57 EEST" duration-ms="101235">
       <class name="com.myp.gui.LoginTest">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:27:32 EEST" name="setUpTest" finished-at="2024-08-06T12:27:34 EEST" duration-ms="1052" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:39:30 EEST" name="setUpTest" finished-at="2024-08-07T14:39:31 EEST" duration-ms="1011" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyAlreadyRegisteredUserCanSuccessfullyLogin()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:27:34 EEST" name="verifyAlreadyRegisteredUserCanSuccessfullyLogin" finished-at="2024-08-06T12:27:36 EEST" duration-ms="2945" status="PASS">
+        <test-method signature="verifyAlreadyRegisteredUserCanSuccessfullyLogin()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:39:31 EEST" name="verifyAlreadyRegisteredUserCanSuccessfullyLogin" finished-at="2024-08-07T14:39:35 EEST" duration-ms="4063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAlreadyRegisteredUserCanSuccessfullyLogin -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:27:36 EEST" name="tearDownTest" finished-at="2024-08-06T12:27:37 EEST" duration-ms="112" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:39:35 EEST" name="tearDownTest" finished-at="2024-08-07T14:39:35 EEST" duration-ms="110" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,11 +26,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:27:37 EEST" name="setUpTest" finished-at="2024-08-06T12:27:38 EEST" duration-ms="952" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:39:35 EEST" name="setUpTest" finished-at="2024-08-07T14:39:36 EEST" duration-ms="887" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:27:38 EEST" name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword" finished-at="2024-08-06T12:27:40 EEST" duration-ms="2463" status="FAIL">
+        <test-method signature="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:39:36 EEST" name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword" finished-at="2024-08-07T14:39:39 EEST" duration-ms="3176" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Successful login!] but found [Ivalid password]]]>
@@ -43,7 +43,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
+at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:72)
 at com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(LoginTest.java:75)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -81,7 +81,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:27:40 EEST" name="tearDownTest" finished-at="2024-08-06T12:27:40 EEST" duration-ms="228" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:39:39 EEST" name="tearDownTest" finished-at="2024-08-07T14:39:39 EEST" duration-ms="239" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -92,11 +92,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:27:40 EEST" name="setUpTest" finished-at="2024-08-06T12:27:41 EEST" duration-ms="959" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:39:39 EEST" name="setUpTest" finished-at="2024-08-07T14:39:40 EEST" duration-ms="948" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:27:41 EEST" name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername" finished-at="2024-08-06T12:28:03 EEST" duration-ms="21631" status="FAIL">
+        <test-method signature="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:39:40 EEST" name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername" finished-at="2024-08-07T14:40:02 EEST" duration-ms="21576" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: usernameOrEmail' (tried for 10 second(s) with 500 milliseconds interval)]]>
@@ -106,7 +106,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 at com.myp.POM.CommonMethodsForPOM.typeTextInField(CommonMethodsForPOM.java:40)
-at com.myp.POM.LoginPage.provideUserName(LoginPage.java:74)
+at com.myp.POM.LoginPage.provideUserName(LoginPage.java:51)
 at com.myp.gui.LoginTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername(LoginTest.java:90)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -144,9 +144,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [898f3bd5eeaa1cb6105843456aeba858, findElement {value=usernameOrEmail, using=name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\mpana\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52969}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52969/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 898f3bd5eeaa1cb6105843456aeba858
+Command: [dac2aa9d5eaa6e10b5ff807cfedc2b5a, findElement {using=name, value=usernameOrEmail}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\mpana\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63585}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63585/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dac2aa9d5eaa6e10b5ff807cfedc2b5a
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -175,7 +175,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongUsername -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:28:03 EEST" name="tearDownTest" finished-at="2024-08-06T12:28:03 EEST" duration-ms="211" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:40:02 EEST" name="tearDownTest" finished-at="2024-08-07T14:40:02 EEST" duration-ms="182" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -186,15 +186,15 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:28:03 EEST" name="setUpTest" finished-at="2024-08-06T12:28:04 EEST" duration-ms="996" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:40:02 EEST" name="setUpTest" finished-at="2024-08-07T14:40:03 EEST" duration-ms="975" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyUserCanSuccessfullyLogout()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:28:04 EEST" name="verifyUserCanSuccessfullyLogout" finished-at="2024-08-06T12:28:16 EEST" duration-ms="12294" status="PASS">
+        <test-method signature="verifyUserCanSuccessfullyLogout()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:40:03 EEST" name="verifyUserCanSuccessfullyLogout" finished-at="2024-08-07T14:40:16 EEST" duration-ms="13100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCanSuccessfullyLogout -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:28:16 EEST" name="tearDownTest" finished-at="2024-08-06T12:28:16 EEST" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:40:16 EEST" name="tearDownTest" finished-at="2024-08-07T14:40:16 EEST" duration-ms="107" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -205,11 +205,11 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:28:16 EEST" name="setUpTest" finished-at="2024-08-06T12:28:17 EEST" duration-ms="941" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:40:16 EEST" name="setUpTest" finished-at="2024-08-07T14:40:17 EEST" duration-ms="944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyUnregisteredUserCannotLogin()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:28:17 EEST" name="verifyUnregisteredUserCannotLogin" finished-at="2024-08-06T12:28:20 EEST" duration-ms="2638" status="FAIL">
+        <test-method signature="verifyUnregisteredUserCannotLogin()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:40:17 EEST" name="verifyUnregisteredUserCannotLogin" finished-at="2024-08-07T14:40:20 EEST" duration-ms="2451" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Successful login!] but found [User not found]]]>
@@ -222,7 +222,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
+at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:72)
 at com.myp.gui.LoginTest.verifyUnregisteredUserCannotLogin(LoginTest.java:170)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -260,7 +260,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUnregisteredUserCannotLogin -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:28:20 EEST" name="tearDownTest" finished-at="2024-08-06T12:28:20 EEST" duration-ms="238" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:40:20 EEST" name="tearDownTest" finished-at="2024-08-07T14:40:20 EEST" duration-ms="188" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -271,11 +271,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:28:20 EEST" name="setUpTest" finished-at="2024-08-06T12:28:21 EEST" duration-ms="942" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:40:20 EEST" name="setUpTest" finished-at="2024-08-07T14:40:21 EEST" duration-ms="943" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyUserCannotLoginWithEmptyCredentials()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:28:21 EEST" name="verifyUserCannotLoginWithEmptyCredentials" finished-at="2024-08-06T12:28:24 EEST" duration-ms="3298" status="FAIL">
+        <test-method signature="verifyUserCannotLoginWithEmptyCredentials()[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:40:21 EEST" name="verifyUserCannotLoginWithEmptyCredentials" finished-at="2024-08-07T14:40:24 EEST" duration-ms="3557" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Successful login!] but found [UsernameOrEmail cannot be empty]]]>
@@ -288,7 +288,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
+at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:72)
 at com.myp.gui.LoginTest.verifyUserCannotLoginWithEmptyCredentials(LoginTest.java:200)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -326,7 +326,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCannotLoginWithEmptyCredentials -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-06T12:28:24 EEST" name="tearDownTest" finished-at="2024-08-06T12:28:25 EEST" duration-ms="207" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.LoginTest@77fbd92c]" started-at="2024-08-07T14:40:24 EEST" name="tearDownTest" finished-at="2024-08-07T14:40:25 EEST" duration-ms="202" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -339,15 +339,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
         </test-method> <!-- tearDownTest -->
       </class> <!-- com.myp.gui.LoginTest -->
       <class name="com.myp.gui.EndToEndTest">
-        <test-method is-config="true" signature="setupTestSuite()[pri:0, instance:com.myp.gui.EndToEndTest@49139829]" started-at="2024-08-06T12:27:22 EEST" name="setupTestSuite" finished-at="2024-08-06T12:27:23 EEST" duration-ms="915" status="PASS">
+        <test-method is-config="true" signature="setupTestSuite()[pri:0, instance:com.myp.gui.EndToEndTest@49139829]" started-at="2024-08-07T14:39:15 EEST" name="setupTestSuite" finished-at="2024-08-07T14:39:16 EEST" duration-ms="320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTestSuite -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.EndToEndTest@49139829]" started-at="2024-08-06T12:27:23 EEST" name="setUpTest" finished-at="2024-08-06T12:27:25 EEST" duration-ms="1383" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.EndToEndTest@49139829]" started-at="2024-08-07T14:39:16 EEST" name="setUpTest" finished-at="2024-08-07T14:39:17 EEST" duration-ms="1257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="endToEndTest(java.io.File,java.lang.String)[pri:0, instance:com.myp.gui.EndToEndTest@49139829]" started-at="2024-08-06T12:27:25 EEST" name="endToEndTest" data-provider="endToEndTest" finished-at="2024-08-06T12:27:32 EEST" duration-ms="7591" status="PASS">
+        <test-method signature="endToEndTest(java.io.File,java.lang.String)[pri:0, instance:com.myp.gui.EndToEndTest@49139829]" started-at="2024-08-07T14:39:17 EEST" name="endToEndTest" data-provider="endToEndTest" finished-at="2024-08-07T14:39:30 EEST" duration-ms="12714" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -360,31 +360,84 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for url to contain "http://training.skillo-bg.com:4200/posts/all". Current url: "http://training.skillo-bg.com:4200/users/register" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\mpana\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63485}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63485/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c705912e71b7e727fbf96c891927abcd]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "http://training.skillo-bg.com:4200/posts/all". Current url: "http://training.skillo-bg.com:4200/users/register" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\mpana\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63485}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63485/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c705912e71b7e727fbf96c891927abcd
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.myp.POM.CommonMethodsForPOM.isUrlLoaded(CommonMethodsForPOM.java:52)
+at com.myp.gui.EndToEndTest.endToEndTest(EndToEndTest.java:57)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endToEndTest -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.EndToEndTest@49139829]" started-at="2024-08-06T12:27:32 EEST" name="tearDownTest" finished-at="2024-08-06T12:27:32 EEST" duration-ms="148" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.EndToEndTest@49139829]" started-at="2024-08-07T14:39:30 EEST" name="tearDownTest" finished-at="2024-08-07T14:39:30 EEST" duration-ms="194" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=endToEndTest status=SUCCESS method=EndToEndTest.endToEndTest(java.io.File,java.lang.String)[pri:0, instance:com.myp.gui.EndToEndTest@49139829] output={null}]]]>
+                <![CDATA[[TestResult name=endToEndTest status=FAILURE method=EndToEndTest.endToEndTest(java.io.File,java.lang.String)[pri:0, instance:com.myp.gui.EndToEndTest@49139829] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="cleanFiles()[pri:0, instance:com.myp.gui.EndToEndTest@49139829]" started-at="2024-08-06T12:28:58 EEST" name="cleanFiles" finished-at="2024-08-06T12:28:58 EEST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="cleanFiles()[pri:0, instance:com.myp.gui.EndToEndTest@49139829]" started-at="2024-08-07T14:40:57 EEST" name="cleanFiles" finished-at="2024-08-07T14:40:57 EEST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanFiles -->
       </class> <!-- com.myp.gui.EndToEndTest -->
       <class name="com.myp.gui.PostCommentDelete">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.PostCommentDelete@72967906]" started-at="2024-08-06T12:28:25 EEST" name="setUpTest" finished-at="2024-08-06T12:28:26 EEST" duration-ms="1029" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.PostCommentDelete@72967906]" started-at="2024-08-07T14:40:25 EEST" name="setUpTest" finished-at="2024-08-07T14:40:26 EEST" duration-ms="943" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyUserCanCreateAndCommentOnPost(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String,java.lang.String)[pri:0, instance:com.myp.gui.PostCommentDelete@72967906]" started-at="2024-08-06T12:28:26 EEST" name="verifyUserCanCreateAndCommentOnPost" data-provider="CommentPostDataProvider" finished-at="2024-08-06T12:28:31 EEST" duration-ms="5609" status="PASS">
+        <test-method signature="verifyUserCanCreateAndCommentOnPost(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String,java.lang.String)[pri:0, instance:com.myp.gui.PostCommentDelete@72967906]" started-at="2024-08-07T14:40:26 EEST" name="verifyUserCanCreateAndCommentOnPost" data-provider="CommentPostDataProvider" finished-at="2024-08-07T14:40:31 EEST" duration-ms="5051" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -420,7 +473,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCanCreateAndCommentOnPost -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.PostCommentDelete@72967906]" started-at="2024-08-06T12:28:31 EEST" name="tearDownTest" finished-at="2024-08-06T12:28:31 EEST" duration-ms="132" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.PostCommentDelete@72967906]" started-at="2024-08-07T14:40:31 EEST" name="tearDownTest" finished-at="2024-08-07T14:40:31 EEST" duration-ms="120" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -431,17 +484,68 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-      </class> <!-- com.myp.gui.PostCommentDelete -->
-      <class name="com.myp.gui.RegistrationTest">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:36 EEST" name="setUpTest" finished-at="2024-08-06T12:28:37 EEST" duration-ms="945" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.PostCommentDelete@72967906]" started-at="2024-08-07T14:40:31 EEST" name="setUpTest" finished-at="2024-08-07T14:40:32 EEST" duration-ms="895" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyUserCanRegisterWithValidData()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:37 EEST" name="verifyUserCanRegisterWithValidData" finished-at="2024-08-06T12:28:42 EEST" duration-ms="4134" status="PASS">
+        <test-method signature="verifyUserCanDeletePost(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String,java.lang.String)[pri:0, instance:com.myp.gui.PostCommentDelete@72967906]" started-at="2024-08-07T14:40:32 EEST" name="verifyUserCanDeletePost" data-provider="CommentPostDataProvider" finished-at="2024-08-07T14:40:35 EEST" depends-on-methods="com.myp.gui.PostCommentDelete.verifyUserCanCreateAndCommentOnPost" duration-ms="3498" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[megamare]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ortoparisi]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[megamare]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[src\test\resources\uploads\testUpload.jpg]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Testing create post caption]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[This is a test comment]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCanDeletePost -->
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.PostCommentDelete@72967906]" started-at="2024-08-07T14:40:35 EEST" name="tearDownTest" finished-at="2024-08-07T14:40:35 EEST" duration-ms="141" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserCanDeletePost status=SUCCESS method=PostCommentDelete.verifyUserCanDeletePost(java.lang.String,java.lang.String,java.lang.String,java.io.File,java.lang.String,java.lang.String)[pri:0, instance:com.myp.gui.PostCommentDelete@72967906] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- com.myp.gui.PostCommentDelete -->
+      <class name="com.myp.gui.RegistrationTest">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:40 EEST" name="setUpTest" finished-at="2024-08-07T14:40:41 EEST" duration-ms="987" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="verifyUserCanRegisterWithValidData()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:41 EEST" name="verifyUserCanRegisterWithValidData" finished-at="2024-08-07T14:40:44 EEST" duration-ms="3820" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCanRegisterWithValidData -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:42 EEST" name="tearDownTest" finished-at="2024-08-06T12:28:42 EEST" duration-ms="108" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:44 EEST" name="tearDownTest" finished-at="2024-08-07T14:40:44 EEST" duration-ms="109" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -452,15 +556,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:42 EEST" name="setUpTest" finished-at="2024-08-06T12:28:43 EEST" duration-ms="951" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:44 EEST" name="setUpTest" finished-at="2024-08-07T14:40:45 EEST" duration-ms="883" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyUserCannotRegisterWithInvalidData()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:43 EEST" name="verifyUserCannotRegisterWithInvalidData" finished-at="2024-08-06T12:28:45 EEST" duration-ms="2612" status="PASS">
+        <test-method signature="verifyUserCannotRegisterWithInvalidData()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:45 EEST" name="verifyUserCannotRegisterWithInvalidData" finished-at="2024-08-07T14:40:48 EEST" duration-ms="2520" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCannotRegisterWithInvalidData -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:45 EEST" name="tearDownTest" finished-at="2024-08-06T12:28:45 EEST" duration-ms="101" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:48 EEST" name="tearDownTest" finished-at="2024-08-07T14:40:48 EEST" duration-ms="116" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -471,15 +575,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:45 EEST" name="setUpTest" finished-at="2024-08-06T12:28:46 EEST" duration-ms="925" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:48 EEST" name="setUpTest" finished-at="2024-08-07T14:40:49 EEST" duration-ms="891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyAlreadyRegisteredUserCanSuccessfullyLogin()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:46 EEST" name="verifyAlreadyRegisteredUserCanSuccessfullyLogin" finished-at="2024-08-06T12:28:49 EEST" duration-ms="2907" status="PASS">
+        <test-method signature="verifyAlreadyRegisteredUserCanSuccessfullyLogin()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:49 EEST" name="verifyAlreadyRegisteredUserCanSuccessfullyLogin" finished-at="2024-08-07T14:40:52 EEST" duration-ms="3227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAlreadyRegisteredUserCanSuccessfullyLogin -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:49 EEST" name="tearDownTest" finished-at="2024-08-06T12:28:49 EEST" duration-ms="144" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:52 EEST" name="tearDownTest" finished-at="2024-08-07T14:40:52 EEST" duration-ms="111" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -490,15 +594,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:49 EEST" name="setUpTest" finished-at="2024-08-06T12:28:50 EEST" duration-ms="958" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:52 EEST" name="setUpTest" finished-at="2024-08-07T14:40:53 EEST" duration-ms="894" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndNavigateToEditProfile()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:50 EEST" name="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndNavigateToEditProfile" finished-at="2024-08-06T12:28:54 EEST" duration-ms="3682" status="PASS">
+        <test-method signature="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndNavigateToEditProfile()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:53 EEST" name="verifyAlreadyRegisteredUserCanSuccessfullyLoginAndNavigateToEditProfile" finished-at="2024-08-07T14:40:57 EEST" duration-ms="3736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAlreadyRegisteredUserCanSuccessfullyLoginAndNavigateToEditProfile -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:54 EEST" name="tearDownTest" finished-at="2024-08-06T12:28:54 EEST" duration-ms="124" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-07T14:40:57 EEST" name="tearDownTest" finished-at="2024-08-07T14:40:57 EEST" duration-ms="117" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -509,83 +613,17 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:54 EEST" name="setUpTest" finished-at="2024-08-06T12:28:55 EEST" duration-ms="939" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpTest -->
-        <test-method signature="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:55 EEST" name="verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword" finished-at="2024-08-06T12:28:58 EEST" duration-ms="3130" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successful login!] but found [Ivalid password]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successful login!] but found [Ivalid password]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.myp.POM.LoginPage.msgStatusAfterSubmitSuccessfulLogin(LoginPage.java:95)
-at com.myp.gui.RegistrationTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword(RegistrationTest.java:153)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf]" started-at="2024-08-06T12:28:58 EEST" name="tearDownTest" finished-at="2024-08-06T12:28:58 EEST" duration-ms="204" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword status=FAILURE method=RegistrationTest.verifyAlreadyRegisteredUserCanNotSuccessfullyLoginWithWrongPassword()[pri:0, instance:com.myp.gui.RegistrationTest@2f9f7dcf] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownTest -->
       </class> <!-- com.myp.gui.RegistrationTest -->
       <class name="com.myp.gui.PostTest">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.PostTest@5b8dfcc1]" started-at="2024-08-06T12:28:31 EEST" name="setUpTest" finished-at="2024-08-06T12:28:32 EEST" duration-ms="894" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.myp.gui.PostTest@5b8dfcc1]" started-at="2024-08-07T14:40:35 EEST" name="setUpTest" finished-at="2024-08-07T14:40:36 EEST" duration-ms="957" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="verifyPostModalDetails()[pri:0, instance:com.myp.gui.PostTest@5b8dfcc1]" started-at="2024-08-06T12:28:32 EEST" name="verifyPostModalDetails" finished-at="2024-08-06T12:28:36 EEST" duration-ms="3973" status="PASS">
+        <test-method signature="verifyPostModalDetails()[pri:0, instance:com.myp.gui.PostTest@5b8dfcc1]" started-at="2024-08-07T14:40:36 EEST" name="verifyPostModalDetails" finished-at="2024-08-07T14:40:39 EEST" duration-ms="3152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPostModalDetails -->
-        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.PostTest@5b8dfcc1]" started-at="2024-08-06T12:28:36 EEST" name="tearDownTest" finished-at="2024-08-06T12:28:36 EEST" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:com.myp.gui.PostTest@5b8dfcc1]" started-at="2024-08-07T14:40:39 EEST" name="tearDownTest" finished-at="2024-08-07T14:40:40 EEST" duration-ms="179" status="PASS">
           <params>
             <param index="0">
               <value>
